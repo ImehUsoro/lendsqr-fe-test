@@ -1,0 +1,17 @@
+@import "../../Variables/Variables.scss";
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap");
+@import url('https://fonts.cdnfonts.com/css/avenir-next-cyr');
+@import url('https://fonts.cdnfonts.com/css/avenir-next-lt-pro');
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $primary-font;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
+}
+
+

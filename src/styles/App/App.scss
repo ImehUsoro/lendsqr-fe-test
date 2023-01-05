@@ -1,0 +1,19 @@
+@import "../../Variables/Variables.scss";
+
+// @import url('https://fonts.cdnfonts.com/css/avenir-next-cyr');
+@import url('https://fonts.cdnfonts.com/css/avenir-next-lt-pro');
+
+.app {
+    background-color: $pending-text-color;
+    font-family: $secondary-font;
+    font-size: 32px;
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+
+// can pass arguments to mixins like this greenButton($color: #39CD62, $bg-color: #F2FAF4)
+.green-btn {
+    @include greenButton;
+}

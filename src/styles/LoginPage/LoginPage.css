@@ -1,0 +1,147 @@
+.container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  font-family: "Avenir Next Cyr", sans-serif;
+}
+.container .left-side {
+  background-color: rgba(0, 0, 0, 0.031372549);
+  width: 50%;
+  padding-top: 6.625rem;
+  padding-left: 4.1875rem;
+}
+.container .left-side .lendsqr-logo {
+  margin-left: 1.875rem;
+  margin-bottom: 8.6875rem;
+  cursor: pointer;
+}
+.container .left-side .lendsqr-image {
+  cursor: pointer;
+}
+.container .right-side {
+  background-color: #ffffff;
+  width: 50%;
+  padding-left: 6.25rem;
+}
+.container .right-side .welcome {
+  margin: 0;
+  margin-top: 13.75rem;
+  margin-bottom: 0.625rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #213f7d;
+  letter-spacing: -0.09rem;
+}
+.container .right-side .login-text {
+  font-family: "Avenir Next Cyr", sans-serif;
+  font-size: 1.25rem;
+  color: #545f7d;
+  margin-bottom: 3.75rem;
+}
+.container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 70%;
+  font-family: "Avenir Next Cyr", sans-serif;
+}
+.container form .email-input {
+  border: 1px solid rgba(84, 95, 125, 0.1490196078);
+  border-radius: 0.3125rem;
+  padding: 1.09rem 1rem 0.78125rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #545f7d;
+}
+.container form .email-input:focus {
+  outline: none;
+}
+.container form .email-input::-moz-placeholder {
+  color: rgba(84, 95, 125, 0.3647058824);
+  font-size: 0.875rem;
+}
+.container form .email-input:-ms-input-placeholder {
+  color: rgba(84, 95, 125, 0.3647058824);
+  font-size: 0.875rem;
+}
+.container form .email-input::placeholder {
+  color: rgba(84, 95, 125, 0.3647058824);
+  font-size: 0.875rem;
+}
+.container form input:-webkit-autofill {
+  -webkit-transition: background-color 1s 5000s;
+  transition: background-color 1s 5000s;
+}
+.container form .password-section {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid rgba(84, 95, 125, 0.1490196078);
+  padding: 1.09rem 1rem 0.78125rem 1rem;
+  border-radius: 0.3125rem;
+  color: #545f7d;
+}
+.container form .password-section .password-input {
+  border: none;
+  width: 90%;
+  font-weight: 600;
+}
+.container form .password-section .password-input:focus {
+  outline: none;
+}
+.container form .password-section .password-input::-moz-placeholder {
+  color: rgba(84, 95, 125, 0.3647058824);
+  font-size: 0.875rem;
+}
+.container form .password-section .password-input:-ms-input-placeholder {
+  color: rgba(84, 95, 125, 0.3647058824);
+  font-size: 0.875rem;
+}
+.container form .password-section .password-input::placeholder {
+  color: rgba(84, 95, 125, 0.3647058824);
+  font-size: 0.875rem;
+}
+.container form .password-section .show-password-btn {
+  color: #39cdcc;
+  background: none;
+  border: none;
+  font-size: 0.75rem;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.container form .forgot-text {
+  color: #39cdcc;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  transition: all 0.2s ease-in-out;
+}
+.container form .forgot-text:hover {
+  opacity: 0.8;
+}
+.container form .forgot-text:active {
+  opacity: 0.5;
+}
+.container form .link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #39cdcc;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  padding: 1rem 0rem;
+  transition: all 0.2s ease-in-out;
+}
+.container form .link:hover {
+  opacity: 0.8;
+}
+.container form .link:active {
+  opacity: 0.6;
+}/*# sourceMappingURL=LoginPage.css.map */

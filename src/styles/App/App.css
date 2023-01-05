@@ -1,0 +1,25 @@
+@import url("https://fonts.cdnfonts.com/css/avenir-next-lt-pro");
+.app {
+  background-color: #E9B200;
+  font-family: "Avenir Next LT Pro", sans-serif;
+  font-size: 32px;
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+
+.green-btn {
+  background-color: #F2FAF4;
+  color: #39CD62;
+  border: 1px solid #F2FAF4;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.green-btn:hover {
+  background-color: #39CD62;
+  color: #F2FAF4;
+}/*# sourceMappingURL=App.css.map */
