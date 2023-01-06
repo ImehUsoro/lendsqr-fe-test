@@ -23,9 +23,12 @@
   }
 
   .right-side {
-    background-color: $secondary-bg-color;
+    background-color: $primary-bg-color;
     width: 50%;
     padding-left: 6.25rem;
+    box-shadow: -15px 0px 90px 0px rgba(0, 0, 0, 0.03);
+    -webkit-box-shadow: -15px 0px 90px 0px rgba(0, 0, 0, 0.03);
+    -moz-box-shadow: -15px 0px 90px 0px rgba(0, 0, 0, 0.03);
 
     .welcome {
       margin: 0;
@@ -51,19 +54,19 @@
     gap: 1.5rem;
     width: 70%;
     font-family: $tertiary-font;
+
+    input:-webkit-autofill {
+      transition: background-color 1s 5000s;
+    }
+
     .email-input {
       border: 1px solid $login-border-color;
       border-radius: 0.3125rem;
       padding: 1.09rem 1rem 0.78125rem 1rem;
       font-size: 0.875rem;
       font-weight: 600;
-      color: $secondary-text-color;
+      color: $primary-text-color;
       @include inputPseudo;
-    }
-
-    input:-webkit-autofill {
-      //   transition: background-color 5000s ease-in-out 0s;
-      transition: background-color 1s 5000s;
     }
 
     .password-section {
@@ -110,7 +113,7 @@
     .link {
       @include centerItems;
       background-color: $tertiary-text-color;
-      color: $secondary-bg-color;
+      color: $primary-bg-color;
       text-decoration: none;
       border-radius: 0.5rem;
       padding: 1rem 0rem;
@@ -121,6 +124,14 @@
       &:active {
         opacity: 0.6;
       }
+    }
+  }
+  @media (max-width: 600px) {
+    .left-side {
+      display: none;
+    }
+    .right-side {
+      width: 100%;
     }
   }
 }

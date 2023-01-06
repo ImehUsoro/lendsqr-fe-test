@@ -1,5 +1,6 @@
 import React from "react";
 import { useLoaderData, useNavigation } from "react-router-dom";
+import Header from "../Header";
 
 const Dashboard = () => {
   const data = useLoaderData();
@@ -11,7 +12,11 @@ const Dashboard = () => {
   if (state === "loading") {
     return <h1>Loading...</h1>;
   }
-  return <div>Dashboard</div>;
+  return (
+    <div>
+      <Header />
+    </div>
+  );
 };
 
 export default Dashboard;

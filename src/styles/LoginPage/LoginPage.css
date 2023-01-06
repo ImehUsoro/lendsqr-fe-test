@@ -5,7 +5,7 @@
   font-family: "Avenir Next Cyr", sans-serif;
 }
 .container .left-side {
-  background-color: rgba(0, 0, 0, 0.031372549);
+  background-color: #ffffff;
   width: 50%;
   padding-top: 6.625rem;
   padding-left: 4.1875rem;
@@ -22,6 +22,9 @@
   background-color: #ffffff;
   width: 50%;
   padding-left: 6.25rem;
+  box-shadow: -15px 0px 90px 0px rgba(0, 0, 0, 0.03);
+  -webkit-box-shadow: -15px 0px 90px 0px rgba(0, 0, 0, 0.03);
+  -moz-box-shadow: -15px 0px 90px 0px rgba(0, 0, 0, 0.03);
 }
 .container .right-side .welcome {
   margin: 0;
@@ -45,13 +48,17 @@
   width: 70%;
   font-family: "Avenir Next Cyr", sans-serif;
 }
+.container form input:-webkit-autofill {
+  -webkit-transition: background-color 1s 5000s;
+  transition: background-color 1s 5000s;
+}
 .container form .email-input {
   border: 1px solid rgba(84, 95, 125, 0.1490196078);
   border-radius: 0.3125rem;
   padding: 1.09rem 1rem 0.78125rem 1rem;
   font-size: 0.875rem;
   font-weight: 600;
-  color: #545f7d;
+  color: #213f7d;
 }
 .container form .email-input:focus {
   outline: none;
@@ -67,10 +74,6 @@
 .container form .email-input::placeholder {
   color: rgba(84, 95, 125, 0.3647058824);
   font-size: 0.875rem;
-}
-.container form input:-webkit-autofill {
-  -webkit-transition: background-color 1s 5000s;
-  transition: background-color 1s 5000s;
 }
 .container form .password-section {
   display: flex;
@@ -144,4 +147,12 @@
 }
 .container form .link:active {
   opacity: 0.6;
+}
+@media (max-width: 600px) {
+  .container .left-side {
+    display: none;
+  }
+  .container .right-side {
+    width: 100%;
+  }
 }/*# sourceMappingURL=LoginPage.css.map */

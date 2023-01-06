@@ -1,0 +1,97 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3.75rem 1.5rem 1.875rem;
+  box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
+  -webkit-box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
+  -moz-box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
+}
+.header .left-section {
+  display: flex;
+  gap: 10.5125rem;
+}
+.header .left-section .logo-image {
+  cursor: pointer;
+}
+.header .left-section .search-container {
+  display: flex;
+}
+.header .left-section .search-container .search-input {
+  border-bottom: 0.1px solid #545f7d;
+  border-top: 0.1px solid #545f7d;
+  border-left: 0.1px solid #545f7d;
+  border-radius: 0.5rem 0 0 0.5rem;
+  width: 21.5rem;
+  display: flex;
+  align-items: center;
+  padding-left: 1.5rem;
+}
+.header .left-section .search-container .search-input input {
+  width: 90%;
+  border: none;
+  outline: none;
+}
+.header .left-section .search-container .search-input input::-moz-placeholder {
+  color: #545f7d;
+  opacity: 70%;
+}
+.header .left-section .search-container .search-input input:-ms-input-placeholder {
+  color: #545f7d;
+  opacity: 70%;
+}
+.header .left-section .search-container .search-input input::placeholder {
+  color: #545f7d;
+  opacity: 70%;
+}
+.header .left-section .search-container .green-search-icon {
+  background-color: #39cdcc;
+  border-bottom: 1px solid #39cdcc;
+  border-top: 1px solid #39cdcc;
+  border-right: 1px solid #39cdcc;
+  border-radius: 0 0.5rem 0.5rem 0;
+  display: flex;
+  align-items: center;
+  padding: 0 1.3125rem;
+  cursor: pointer;
+}
+.header .right-section {
+  display: flex;
+  align-items: center;
+}
+.header .right-section .docs {
+  padding: 0;
+  margin: 0;
+  text-decoration: underline;
+  color: #213f7d;
+  margin-right: 3.315rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-size: 1rem;
+}
+.header .right-section .icon {
+  cursor: pointer;
+  margin-right: 2.0725rem;
+  cursor: pointer;
+}
+.header .right-section .profile-image {
+  border-radius: 100%;
+  margin-right: 0.625rem;
+  cursor: pointer;
+}
+.header .right-section .action-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.645625rem;
+}
+.header .right-section .action-btn .username {
+  color: #213f7d;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.header .right-section .action-btn .drop {
+  cursor: pointer;
+}/*# sourceMappingURL=Header.css.map */
