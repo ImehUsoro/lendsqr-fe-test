@@ -1,0 +1,39 @@
+@import "../../Variables/Variables.scss";
+
+.side-bar-container {
+  width: 17.6875rem;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04);
+  padding-top: 2.5rem;
+  padding-bottom: 0.625rem;
+
+  .switch-organization {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    padding-left: 1.875rem;
+    margin-bottom: 2.625rem;
+
+    .text {
+      font-size: 1rem;
+      color: $primary-text-color;
+      padding: 0;
+      margin: 0;
+    }
+    .dropdown {
+      cursor: pointer;
+    }
+  }
+  .title {
+    margin-top: 1.875rem;
+    margin-bottom: 0.625rem;
+    padding-left: 1.875rem;
+    color: $secondary-text-color;
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
+  .grouping {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+  }
+}
