@@ -14,7 +14,7 @@
   opacity: 0.6;
 }
 .container:hover {
-  background-color: rgba(57, 205, 98, 0.2392156863);
+  background-color: #f3fcfc;
   padding-left: 2.3rem;
 }
 .container .image {
@@ -34,5 +34,5 @@
   opacity: 1;
 }
 .active:hover {
-  background-color: rgba(57, 205, 98, 0.2392156863);
+  background-color: #f3fcfc;
 }/*# sourceMappingURL=SideBarItem.css.map */

@@ -1,0 +1,40 @@
+@import "../../Variables/Variables.scss";
+
+.table-container {
+  padding: 1.875rem 1.875rem 2rem 1.875rem;
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  -webkit-box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
+  -moz-box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
+  border-spacing: 0;
+  border-radius: 0.25rem;
+
+  table {
+    border-spacing: 0;
+  }
+
+  th {
+    color: $secondary-text-color;
+    font-size: 0.75rem;
+    text-align: left;
+    padding-bottom: 1.5rem;
+  }
+
+  td {
+    color: $secondary-text-color;
+    font-size: 0.875rem;
+    text-align: left;
+    border-spacing: 0px;
+    border-bottom: 1px solid #213f7d1a;
+    // padding: 0;
+  }
+
+  .table-head-group {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+  }
+  .row {
+    // border: 1px solid red;
+    padding-bottom: 1rem;
+  }
+}

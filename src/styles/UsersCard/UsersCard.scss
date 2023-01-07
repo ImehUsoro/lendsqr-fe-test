@@ -1,0 +1,34 @@
+@import "../../Variables/Variables.scss";
+
+.users-card-container {
+  width: 13.52rem;
+  border-radius: 0.25rem;
+  padding-top: 1.25rem;
+  padding-left: 1.875rem;
+  padding-bottom: 1.875rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.142rem;
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  -webkit-box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  -moz-box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+  .name {
+    color: $secondary-text-color;
+    font-weight: 500;
+    font-size: 0.875rem;
+  }
+  .amount {
+    color: $primary-text-color;
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+
+  img {
+    align-self: start;
+  }
+}

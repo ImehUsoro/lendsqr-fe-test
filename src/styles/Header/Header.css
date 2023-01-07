@@ -18,9 +18,9 @@
   display: flex;
 }
 .header .left-section .search-container .search-input {
-  border-bottom: 0.1px solid #545f7d;
-  border-top: 0.1px solid #545f7d;
-  border-left: 0.1px solid #545f7d;
+  border-bottom: 0.1px solid rgba(33, 63, 125, 0.2);
+  border-top: 0.1px solid rgba(33, 63, 125, 0.2);
+  border-left: 0.1px solid rgba(33, 63, 125, 0.2);
   border-radius: 0.5rem 0 0 0.5rem;
   width: 21.5rem;
   display: flex;

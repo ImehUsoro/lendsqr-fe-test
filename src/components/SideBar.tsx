@@ -21,8 +21,10 @@ import serviceAccount from "../assets/icons/service_account.png";
 import feesAndPricing from "../assets/icons/fees_and_pricing.png";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import SideBarItem from "./SideBarItem";
+import { useState } from "react";
 
 const SideBar = () => {
+  const [active, setActive] = useState("Users");
   return (
     <div className="side-bar-container">
       <div className="switch-organization">
@@ -36,36 +38,117 @@ const SideBar = () => {
       <p className="title">CUSTOMERS</p>
 
       <div className="grouping">
-        <SideBarItem title="Users" icon={users} active />
-        <SideBarItem title="Guarantors" icon={guarantors} />
-        <SideBarItem title="Loans" icon={loans} />
-        <SideBarItem title="Decision Models" icon={decisions} />
-        <SideBarItem title="Savings" icon={savings} />
-        <SideBarItem title="Loan Requests" icon={requests} />
-        <SideBarItem title="Whitelist" icon={whitelist} />
-        <SideBarItem title="Karma" icon={karma} />
+        <div onClick={() => setActive("Users")}>
+          <SideBarItem title="Users" icon={users} active={active} />
+        </div>
+
+        <div onClick={() => setActive("Guarantors")}>
+          <SideBarItem title="Guarantors" icon={guarantors} active={active} />
+        </div>
+
+        <div onClick={() => setActive("Loans")}>
+          <SideBarItem title="Loans" icon={loans} active={active} />
+        </div>
+
+        <div onClick={() => setActive("Decision Models")}>
+          <SideBarItem
+            title="Decision Models"
+            icon={decisions}
+            active={active}
+          />
+        </div>
+
+        <div onClick={() => setActive("Savings")}>
+          <SideBarItem title="Savings" icon={savings} active={active} />
+        </div>
+
+        <div onClick={() => setActive("Loan Requests")}>
+          <SideBarItem title="Loan Requests" icon={requests} active={active} />
+        </div>
+
+        <div onClick={() => setActive("Whitelist")}>
+          <SideBarItem title="Whitelist" icon={whitelist} active={active} />
+        </div>
+
+        <div onClick={() => setActive("Karma")}>
+          <SideBarItem title="Karma" icon={karma} active={active} />
+        </div>
       </div>
 
       <p className="title">BUSINESSES</p>
 
       <div className="grouping">
-        <SideBarItem title="Organization" icon={briefcase} />
-        <SideBarItem title="Loan Products" icon={requests} />
-        <SideBarItem title="Savings Products" icon={savingsProduct} />
-        <SideBarItem title="Fees and Charges" icon={feesAndCharges} />
-        <SideBarItem title="Transactions" icon={transactions} />
-        <SideBarItem title="Services" icon={services} />
-        <SideBarItem title="Service Account" icon={serviceAccount} />
-        <SideBarItem title="Settlements" icon={settlements} />
-        <SideBarItem title="Reports" icon={reports} />
+        <div onClick={() => setActive("Organization")}>
+          <SideBarItem title="Organization" icon={briefcase} active={active} />
+        </div>
+
+        <div onClick={() => setActive("Loan Products")}>
+          <SideBarItem title="Loan Products" icon={requests} active={active} />
+        </div>
+
+        <div onClick={() => setActive("Savings Products")}>
+          <SideBarItem
+            title="Savings Products"
+            icon={savingsProduct}
+            active={active}
+          />
+        </div>
+
+        <div onClick={() => setActive("Fees and Charges")}>
+          <SideBarItem
+            title="Fees and Charges"
+            icon={feesAndCharges}
+            active={active}
+          />
+        </div>
+
+        <div onClick={() => setActive("Transactions")}>
+          <SideBarItem
+            title="Transactions"
+            icon={transactions}
+            active={active}
+          />
+        </div>
+
+        <div onClick={() => setActive("Services")}>
+          <SideBarItem title="Services" icon={services} active={active} />
+        </div>
+
+        <div onClick={() => setActive("Service Account")}>
+          <SideBarItem
+            title="Service Account"
+            icon={serviceAccount}
+            active={active}
+          />
+        </div>
+
+        <div onClick={() => setActive("Settlements")}>
+          <SideBarItem title="Settlements" icon={settlements} active={active} />
+        </div>
+
+        <div onClick={() => setActive("Reports")}>
+          <SideBarItem title="Reports" icon={reports} active={active} />
+        </div>
       </div>
 
       <p className="title">SETTINGS</p>
 
       <div className="grouping">
-        <SideBarItem title="Preferences" icon={preferences} />
-        <SideBarItem title="Fees and Pricing" icon={feesAndPricing} />
-        <SideBarItem title="Audit Logs" icon={audit} />
+        <div onClick={() => setActive("Preferences")}>
+          <SideBarItem title="Preferences" icon={preferences} active={active} />
+        </div>
+
+        <div onClick={() => setActive("Fees and Pricing")}>
+          <SideBarItem
+            title="Fees and Pricing"
+            icon={feesAndPricing}
+            active={active}
+          />
+        </div>
+
+        <div onClick={() => setActive("Audit Logs")}>
+          <SideBarItem title="Audit Logs" icon={audit} active={active} />
+        </div>
       </div>
     </div>
   );

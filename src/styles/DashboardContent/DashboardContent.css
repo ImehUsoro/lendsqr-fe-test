@@ -1,0 +1,13 @@
+.right-container {
+  height: auto;
+  margin-right: 3.75rem;
+  margin-top: 3.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.right-container .heading {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #213f7d;
+}/*# sourceMappingURL=DashboardContent.css.map */

@@ -1,0 +1,16 @@
+@import "../../Variables/Variables.scss";
+
+.right-container {
+  height: auto;
+  margin-right: 3.75rem;
+  margin-top: 3.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+
+  .heading {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: $primary-text-color;
+  }
+}

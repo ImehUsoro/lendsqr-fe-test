@@ -6,8 +6,8 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import LoginPage from "./components/pages/LoginPage";
-import Dashboard from "./components/pages/Dashboard";
-import UserDetails from "./components/pages/UserDetails";
+import DashboardPage from "./components/pages/DashboardPage";
+import UserDetails from "./components/pages/UserDetailsPage";
 import Root from "./components/pages/Root";
 import { fetchSingleUser, fetchUsers } from "./services/api";
 
@@ -16,7 +16,11 @@ function App() {
     createRoutesFromElements(
       <Route path="/" element={<Root />}>
         <Route index element={<LoginPage />} />
-        <Route path="/dashboard" element={<Dashboard />} loader={fetchUsers} />
+        <Route
+          path="/dashboard"
+          element={<DashboardPage />}
+          loader={fetchUsers}
+        />
         <Route
           path="/user-details/:id"
           element={<UserDetails />}
