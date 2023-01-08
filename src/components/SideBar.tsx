@@ -14,6 +14,7 @@ import services from "../assets/icons/services.png";
 import settlements from "../assets/icons/settlements.png";
 import reports from "../assets/icons/reports.png";
 import audit from "../assets/icons/audit.png";
+import logout from "../assets/icons/logout.png";
 import preferences from "../assets/icons/preferences.png";
 import savingsProduct from "../assets/icons/savings_products.png";
 import feesAndCharges from "../assets/icons/fees_and_charges.png";
@@ -21,10 +22,20 @@ import serviceAccount from "../assets/icons/service_account.png";
 import feesAndPricing from "../assets/icons/fees_and_pricing.png";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import SideBarItem from "./SideBarItem";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { useNavigate, useNavigation } from "react-router-dom";
+import { AppContext } from "./context/AppContext";
 
-const SideBar = () => {
+interface SideBarProps {
+  userDetailsPage?: boolean;
+}
+const SideBar = (props: SideBarProps) => {
+  const navigate = useNavigate();
+  const navigation = useNavigation();
+  const { state } = navigation;
   const [active, setActive] = useState("Users");
+  // const { active, setActive } = useContext(AppContext);
+
   return (
     <div className="side-bar-container">
       <div className="switch-organization">
@@ -150,6 +161,21 @@ const SideBar = () => {
           <SideBarItem title="Audit Logs" icon={audit} active={active} />
         </div>
       </div>
+
+      {props.userDetailsPage && (
+        <>
+          <div className="divider"></div>
+
+          <div>
+            <div className="logout" onClick={() => navigate("/")}>
+              <img src={logout} alt={`${logout} icon`} />
+              <p className="">Logout</p>
+            </div>
+
+            <p className="version">v1.2.0</p>
+          </div>
+        </>
+      )}
     </div>
   );
 };

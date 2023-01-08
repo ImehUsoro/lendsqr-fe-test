@@ -1,16 +1,28 @@
+import { useNavigation } from "react-router-dom";
 import "../styles/DashboardContent/DashboardContent.css";
 import UsersInformation from "./UsersInformation";
 import UsersTable from "./UsersTable";
+import BounceLoader from "react-spinners/BounceLoader";
 
 const DashboardContent = () => {
-  return (
-    <div className="right-container">
-      <p className="heading">Users</p>
-      <UsersInformation />
+  const navigation = useNavigation();
+  const { state } = navigation;
 
-      <UsersTable />
-    </div>
-  );
+  if (state === "loading") {
+    return (
+      <div className="loader-container">
+        <BounceLoader color="#39cdcc" size={"15rem"} />
+      </div>
+    );
+  } else {
+    return (
+      <div className="right-container">
+        <p className="heading">Users</p>
+        <UsersInformation />
+        <UsersTable />
+      </div>
+    );
+  }
 };
 
 export default DashboardContent;

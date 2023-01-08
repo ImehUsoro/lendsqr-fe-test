@@ -1,0 +1,42 @@
+@import "../../Variables/Variables.scss";
+
+.info-block {
+  border-bottom: 1px solid #e9ecf2;
+  padding: 1.875rem 0;
+  .secondary-title {
+    padding: 0;
+    margin: 0 0 1.875rem 0;
+    font-size: 1rem;
+    color: $primary-text-color;
+  }
+
+  .grid-container-5 {
+    @include gridTemplates(5);
+    gap: 1.875rem 1rem;
+  }
+  .grid-container-4 {
+    @include gridTemplates(4);
+    gap: 1.875rem 1rem;
+  }
+
+  .single-info-block {
+    .info-block-title {
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      color: $secondary-text-color;
+      padding: 0 0 0.5rem 0;
+      margin: 0;
+    }
+    .info {
+      padding: 0;
+      margin: 0;
+      color: $secondary-text-color;
+      font-weight: 500;
+      font-size: 1rem;
+    }
+  }
+}
+
+.no-border {
+  border: none;
+}

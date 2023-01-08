@@ -40,5 +40,3 @@ const Header = () => {
 };
 
 export default Header;
-
-// IoIosNotificationsOutline;

@@ -32,4 +32,36 @@
   display: flex;
   flex-direction: column;
   gap: 0.625rem;
+}
+.side-bar-container .divider {
+  margin-top: 3.75rem;
+  border: 0.5px solid #213f7d;
+  opacity: 0.1;
+}
+.side-bar-container .logout {
+  color: #213f7d;
+  font-size: 1rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: flex;
+  gap: 0.625rem;
+  align-items: center;
+  padding-left: 1.875rem;
+  transition: all 0.2s ease-in-out;
+  margin: 1.25rem 0 2.5rem;
+}
+.side-bar-container .logout p {
+  padding: 0;
+  margin: 0;
+}
+.side-bar-container .logout:hover {
+  padding-left: 2.3rem;
+}
+.side-bar-container .version {
+  color: #213f7d;
+  padding-left: 1.875rem;
+  font-size: 0.75rem;
 }/*# sourceMappingURL=SideBar.css.map */

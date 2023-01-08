@@ -1,0 +1,18 @@
+@import "../../Variables/Variables.scss";
+
+.single-nav {
+  width: 9.8rem;
+
+  .active-nav {
+    border-bottom: 2px solid $tertiary-text-color;
+    color: $tertiary-text-color;
+  }
+  .nav-name {
+    padding: 0 0 0.625rem 0;
+    margin: 0;
+    text-align: center;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

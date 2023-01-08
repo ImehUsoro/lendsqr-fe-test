@@ -1,0 +1,39 @@
+.user-action-btn {
+  width: 10.625rem;
+  text-align: center;
+  padding: 0.725rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.Blacklist {
+  color: #e4033b;
+  border: 1px solid #e4033b;
+}
+.Blacklist:hover {
+  background-color: #e4033b;
+  color: #fde6eb;
+  opacity: 0.8;
+}
+.Blacklist:active {
+  opacity: 0.6;
+}
+
+.Activate {
+  color: #39cdcc;
+  border: 1px solid #39cdcc;
+}
+.Activate:hover {
+  background-color: #39cdcc;
+  color: #fde6eb;
+  opacity: 0.8;
+}
+.Activate:active {
+  opacity: 0.6;
+}/*# sourceMappingURL=UserActionButton.css.map */

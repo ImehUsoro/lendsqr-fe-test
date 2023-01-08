@@ -42,3 +42,8 @@ $tertiary-font: "Avenir Next Cyr", sans-serif;
     font-size: 0.875rem;
   }
 }
+
+@mixin gridTemplates($columns) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+}

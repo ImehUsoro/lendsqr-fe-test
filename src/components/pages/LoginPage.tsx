@@ -1,13 +1,17 @@
 import "../../styles/LoginPage/LoginPage.css";
 import logo from "../../assets/login-logo.png";
 import image from "../../assets/login-image.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigation } from "react-router-dom";
 import { useState } from "react";
+import { SyncLoader } from "react-spinners";
 
 const LoginPage = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const navigation = useNavigation();
+  const { state } = navigation;
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -19,7 +23,7 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="container">
+    <div className="login-page-container">
       <div className="left-side">
         <img className="lendsqr-logo" src={logo} alt="lendsqr logo" />
         <br />
@@ -61,7 +65,11 @@ const LoginPage = () => {
           </div>
           <p className="forgot-text">FORGOT PASSWORD?</p>
           <Link to={"/dashboard"} className="link">
-            LOG IN
+            {state === "loading" ? (
+              <SyncLoader size={"0.8rem"} color="#ffffff" />
+            ) : (
+              "LOG IN"
+            )}
           </Link>
         </form>
       </div>

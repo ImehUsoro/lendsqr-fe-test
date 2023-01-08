@@ -1,0 +1,15 @@
+.single-nav {
+  width: 9.8rem;
+}
+.single-nav .active-nav {
+  border-bottom: 2px solid #39cdcc;
+  color: #39cdcc;
+}
+.single-nav .nav-name {
+  padding: 0 0 0.625rem 0;
+  margin: 0;
+  text-align: center;
+}
+.single-nav .nav-name:hover {
+  cursor: pointer;
+}/*# sourceMappingURL=UserDetailsNav.css.map */

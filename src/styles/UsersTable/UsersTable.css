@@ -13,7 +13,7 @@
   color: #545f7d;
   font-size: 0.75rem;
   text-align: left;
-  padding-bottom: 1.5rem;
+  padding-bottom: 1.2rem;
 }
 .table-container td {
   color: #545f7d;
@@ -29,4 +29,45 @@
 }
 .table-container .row {
   padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+.table-container .link-to-user-details {
+  text-decoration: none;
+  color: #545f7d;
+}
+.table-container .Inactive {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 6.25rem;
+  color: #545f7d;
+  background-color: #f5f5f7;
+  padding: 0.4375rem 0.8125rem 0.375rem;
+}
+.table-container .Active {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 6.25rem;
+  color: #39cd62;
+  background-color: #f2faf4;
+  padding: 0.4375rem 0.8125rem 0.375rem;
+}
+.table-container .Pending {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 6.25rem;
+  color: #e9b200;
+  background-color: #fdf7e5;
+  padding: 0.4375rem 0.8125rem 0.375rem;
+}
+.table-container .Blacklisted {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 6.25rem;
+  color: #e4033b;
+  background-color: #fde6eb;
+  padding: 0.4375rem 0.8125rem 0.375rem;
 }/*# sourceMappingURL=UsersTable.css.map */

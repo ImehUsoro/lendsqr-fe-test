@@ -16,7 +16,7 @@
     color: $secondary-text-color;
     font-size: 0.75rem;
     text-align: left;
-    padding-bottom: 1.5rem;
+    padding-bottom: 1.2rem;
   }
 
   td {
@@ -25,7 +25,6 @@
     text-align: left;
     border-spacing: 0px;
     border-bottom: 1px solid #213f7d1a;
-    // padding: 0;
   }
 
   .table-head-group {
@@ -34,7 +33,40 @@
     gap: 0.625rem;
   }
   .row {
-    // border: 1px solid red;
     padding-bottom: 1rem;
+    padding-top: 1rem;
+  }
+
+  .link-to-user-details {
+    text-decoration: none;
+    color: $secondary-text-color;
+  }
+  .Inactive {
+    width: fit-content;
+    border-radius: 6.25rem;
+    color: $secondary-text-color;
+    background-color: $inactive-bg-color;
+    padding: 0.4375rem 0.8125rem 0.375rem;
+  }
+  .Active {
+    width: fit-content;
+    border-radius: 6.25rem;
+    color: $active-text-color;
+    background-color: $active-bg-color;
+    padding: 0.4375rem 0.8125rem 0.375rem;
+  }
+  .Pending {
+    width: fit-content;
+    border-radius: 6.25rem;
+    color: $pending-text-color;
+    background-color: $pending-bg-color;
+    padding: 0.4375rem 0.8125rem 0.375rem;
+  }
+  .Blacklisted {
+    width: fit-content;
+    border-radius: 6.25rem;
+    color: $blacklisted-text-color;
+    background-color: $blacklisted-bg-color;
+    padding: 0.4375rem 0.8125rem 0.375rem;
   }
 }

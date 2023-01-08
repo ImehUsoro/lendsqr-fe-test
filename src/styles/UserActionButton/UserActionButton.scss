@@ -1,0 +1,39 @@
+@import "../../Variables/Variables.scss";
+
+.user-action-btn {
+  width: 10.625rem;
+  text-align: center;
+  padding: 0.725rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  user-select: none;
+}
+
+.Blacklist {
+  color: $blacklisted-text-color;
+  border: 1px solid $blacklisted-text-color;
+
+  &:hover {
+    background-color: $blacklisted-text-color;
+    color: $blacklisted-bg-color;
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+.Activate {
+  color: $tertiary-text-color;
+  border: 1px solid $tertiary-text-color;
+  &:hover {
+    background-color: $tertiary-text-color;
+    color: $blacklisted-bg-color;
+    opacity: 0.8;
+  }
+  &:active {
+    opacity: 0.6;
+  }
+}

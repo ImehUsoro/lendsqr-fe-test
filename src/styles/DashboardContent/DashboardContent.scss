@@ -2,7 +2,8 @@
 
 .right-container {
   height: auto;
-  margin-right: 3.75rem;
+  width: 72%;
+  align-self: start;
   margin-top: 3.75rem;
   display: flex;
   flex-direction: column;
@@ -13,4 +14,13 @@
     font-weight: 500;
     color: $primary-text-color;
   }
+}
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  width: 75%;
+  margin-right: 3.75rem;
+  margin-top: 7rem;
 }

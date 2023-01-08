@@ -1,24 +1,24 @@
-.container {
+.login-page-container {
   display: flex;
   width: 100%;
   height: 100vh;
   font-family: "Avenir Next Cyr", sans-serif;
 }
-.container .left-side {
+.login-page-container .left-side {
   background-color: #ffffff;
   width: 50%;
   padding-top: 6.625rem;
   padding-left: 4.1875rem;
 }
-.container .left-side .lendsqr-logo {
+.login-page-container .left-side .lendsqr-logo {
   margin-left: 1.875rem;
   margin-bottom: 8.6875rem;
   cursor: pointer;
 }
-.container .left-side .lendsqr-image {
+.login-page-container .left-side .lendsqr-image {
   cursor: pointer;
 }
-.container .right-side {
+.login-page-container .right-side {
   background-color: #ffffff;
   width: 50%;
   padding-left: 6.25rem;
@@ -26,7 +26,7 @@
   -webkit-box-shadow: -15px 0px 90px 0px rgba(0, 0, 0, 0.03);
   -moz-box-shadow: -15px 0px 90px 0px rgba(0, 0, 0, 0.03);
 }
-.container .right-side .welcome {
+.login-page-container .right-side .welcome {
   margin: 0;
   margin-top: 13.75rem;
   margin-bottom: 0.625rem;
@@ -35,24 +35,24 @@
   color: #213f7d;
   letter-spacing: -0.09rem;
 }
-.container .right-side .login-text {
+.login-page-container .right-side .login-text {
   font-family: "Avenir Next Cyr", sans-serif;
   font-size: 1.25rem;
   color: #545f7d;
   margin-bottom: 3.75rem;
 }
-.container form {
+.login-page-container form {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   width: 70%;
   font-family: "Avenir Next Cyr", sans-serif;
 }
-.container form input:-webkit-autofill {
+.login-page-container form input:-webkit-autofill {
   -webkit-transition: background-color 1s 5000s;
   transition: background-color 1s 5000s;
 }
-.container form .email-input {
+.login-page-container form .email-input {
   border: 1px solid rgba(84, 95, 125, 0.1490196078);
   border-radius: 0.3125rem;
   padding: 1.09rem 1rem 0.78125rem 1rem;
@@ -60,22 +60,22 @@
   font-weight: 600;
   color: #213f7d;
 }
-.container form .email-input:focus {
+.login-page-container form .email-input:focus {
   outline: none;
 }
-.container form .email-input::-moz-placeholder {
+.login-page-container form .email-input::-moz-placeholder {
   color: rgba(84, 95, 125, 0.3647058824);
   font-size: 0.875rem;
 }
-.container form .email-input:-ms-input-placeholder {
+.login-page-container form .email-input:-ms-input-placeholder {
   color: rgba(84, 95, 125, 0.3647058824);
   font-size: 0.875rem;
 }
-.container form .email-input::placeholder {
+.login-page-container form .email-input::placeholder {
   color: rgba(84, 95, 125, 0.3647058824);
   font-size: 0.875rem;
 }
-.container form .password-section {
+.login-page-container form .password-section {
   display: flex;
   justify-content: space-between;
   border: 1px solid rgba(84, 95, 125, 0.1490196078);
@@ -83,27 +83,27 @@
   border-radius: 0.3125rem;
   color: #545f7d;
 }
-.container form .password-section .password-input {
+.login-page-container form .password-section .password-input {
   border: none;
   width: 90%;
   font-weight: 600;
 }
-.container form .password-section .password-input:focus {
+.login-page-container form .password-section .password-input:focus {
   outline: none;
 }
-.container form .password-section .password-input::-moz-placeholder {
+.login-page-container form .password-section .password-input::-moz-placeholder {
   color: rgba(84, 95, 125, 0.3647058824);
   font-size: 0.875rem;
 }
-.container form .password-section .password-input:-ms-input-placeholder {
+.login-page-container form .password-section .password-input:-ms-input-placeholder {
   color: rgba(84, 95, 125, 0.3647058824);
   font-size: 0.875rem;
 }
-.container form .password-section .password-input::placeholder {
+.login-page-container form .password-section .password-input::placeholder {
   color: rgba(84, 95, 125, 0.3647058824);
   font-size: 0.875rem;
 }
-.container form .password-section .show-password-btn {
+.login-page-container form .password-section .show-password-btn {
   color: #39cdcc;
   background: none;
   border: none;
@@ -116,7 +116,7 @@
       -ms-user-select: none;
           user-select: none;
 }
-.container form .forgot-text {
+.login-page-container form .forgot-text {
   color: #39cdcc;
   cursor: pointer;
   -webkit-user-select: none;
@@ -125,13 +125,13 @@
           user-select: none;
   transition: all 0.2s ease-in-out;
 }
-.container form .forgot-text:hover {
+.login-page-container form .forgot-text:hover {
   opacity: 0.8;
 }
-.container form .forgot-text:active {
+.login-page-container form .forgot-text:active {
   opacity: 0.5;
 }
-.container form .link {
+.login-page-container form .link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -142,17 +142,17 @@
   padding: 1rem 0rem;
   transition: all 0.2s ease-in-out;
 }
-.container form .link:hover {
+.login-page-container form .link:hover {
   opacity: 0.8;
 }
-.container form .link:active {
+.login-page-container form .link:active {
   opacity: 0.6;
 }
 @media (max-width: 600px) {
-  .container .left-side {
+  .login-page-container .left-side {
     display: none;
   }
-  .container .right-side {
+  .login-page-container .right-side {
     width: 100%;
   }
 }/*# sourceMappingURL=LoginPage.css.map */

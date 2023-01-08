@@ -1,0 +1,123 @@
+@import "../../Variables/Variables.scss";
+
+.user-detail {
+  align-self: start;
+  width: 72%;
+  margin-top: 4.0625rem;
+
+  .go-back {
+    display: flex;
+    gap: 0.8125rem;
+    align-items: center;
+    margin-bottom: 1.25rem;
+    .back-icon {
+      cursor: pointer;
+    }
+    .back-text {
+      padding: 0 0 0.2rem 0;
+      margin: 0;
+      font-size: 1rem;
+      color: $secondary-text-color;
+    }
+  }
+
+  .user-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.5rem;
+
+    .text {
+      font-weight: 500;
+      font-size: 1.5rem;
+      color: $primary-text-color;
+      padding: 0;
+      margin: 0;
+    }
+    .blacklist-and-activate {
+      display: flex;
+      gap: 1.25rem;
+    }
+  }
+
+  .primary-information {
+    padding: 1.875rem 0 0 1.875rem;
+    margin-bottom: 1.875rem;
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+    .user-info-display {
+      display: flex;
+      align-items: center;
+      margin-bottom: 3.1875rem;
+
+      .user-image {
+        width: 6.25rem;
+        height: 6.25rem;
+        border-radius: 50%;
+        object-fit: contain;
+        cursor: pointer;
+        margin-right: 1.25rem;
+      }
+      .name-and-bvn {
+        margin-right: 1.875rem;
+        .name {
+          padding: 0;
+          margin: 0 0 0.5rem 0;
+          font-size: 1.375rem;
+          color: $primary-text-color;
+        }
+        .bvn {
+          padding: 0;
+          margin: 0;
+          color: $secondary-text-color;
+        }
+      }
+
+      .bar {
+        border: 0.5px solid $secondary-text-color;
+        height: 5rem;
+        opacity: 0.2;
+        margin-right: 1.875rem;
+      }
+
+      .users-tier {
+        margin-right: 1.875rem;
+
+        .name {
+          padding: 0;
+          margin: 0 0 0.625rem 0;
+          color: $secondary-text-color;
+        }
+        .stars {
+          cursor: pointer;
+        }
+      }
+
+      .bank-and-amount {
+        .amount {
+          padding: 0;
+          margin: 0 0 0.75rem 0;
+          color: $primary-text-color;
+          font-weight: 500;
+          font-size: 1.375rem;
+        }
+        .bank {
+          font-size: 0.75rem;
+          color: $primary-text-color;
+          padding: 0;
+          margin: 0;
+        }
+      }
+    }
+
+    .user-info-nav {
+      display: flex;
+      gap: 0.5rem;
+    }
+  }
+
+  .secondary-information {
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+    padding: 0 1.875rem 1rem;
+    height: fit-content;
+  }
+}
