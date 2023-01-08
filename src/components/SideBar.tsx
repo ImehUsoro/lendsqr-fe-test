@@ -22,19 +22,15 @@ import serviceAccount from "../assets/icons/service_account.png";
 import feesAndPricing from "../assets/icons/fees_and_pricing.png";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import SideBarItem from "./SideBarItem";
-import { useContext, useState } from "react";
-import { useNavigate, useNavigation } from "react-router-dom";
-import { AppContext } from "./context/AppContext";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 interface SideBarProps {
   userDetailsPage?: boolean;
 }
 const SideBar = (props: SideBarProps) => {
   const navigate = useNavigate();
-  const navigation = useNavigation();
-  const { state } = navigation;
   const [active, setActive] = useState("Users");
-  // const { active, setActive } = useContext(AppContext);
 
   return (
     <div className="side-bar-container">

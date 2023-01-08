@@ -10,21 +10,8 @@ import DashboardPage from "./components/pages/DashboardPage";
 import UserDetails from "./components/pages/UserDetailsPage";
 import Root from "./components/pages/Root";
 import { fetchSingleUser, fetchUsers } from "./services/api";
-import { useState } from "react";
-import { AppContext } from "./components/context/AppContext";
-import {
-  useQuery,
-  useMutation,
-  useQueryClient,
-  QueryClient,
-  QueryClientProvider,
-} from "react-query";
 
 function App() {
-  // const [active, setActive] = useState("Users");
-
-  // const { data, isLoading } = useQuery("users", fetchUsers);
-
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<Root />}>

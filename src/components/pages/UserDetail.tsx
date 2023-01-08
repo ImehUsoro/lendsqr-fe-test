@@ -1,6 +1,6 @@
 import "../../styles/UserDetail/UserDetail.css";
 import back from "../../assets/icons/back_button.png";
-import { Link, useLoaderData, useNavigation } from "react-router-dom";
+import { Link, useNavigation } from "react-router-dom";
 import { BounceLoader } from "react-spinners";
 import UserActionButton from "../UserActionButton";
 import { MdStarOutline, MdStar } from "react-icons/md";
@@ -11,11 +11,9 @@ import { randomBank } from "../../utils/utils";
 
 const UserDetail = () => {
   const [activeNav, setActiveNav] = useState("General Details");
-  const data: any = useLoaderData();
   const navigation = useNavigation();
   const { state } = navigation;
-  // const data = JSON.parse(localStorage.getItem("user") as string);
-  // console.log(data);
+  const data = JSON.parse(localStorage.getItem("user") as string);
 
   if (state === "loading") {
     return (

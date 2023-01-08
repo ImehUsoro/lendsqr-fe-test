@@ -1,7 +1,3 @@
-import {
-  useLoaderData,
-  //  useNavigation
-} from "react-router-dom";
 import "../styles/InfoBlock/InfoBlock.css";
 import {
   noOfChildren,
@@ -16,7 +12,7 @@ interface InfoBlockProps {
   last?: boolean;
 }
 const InfoBlock = (props: InfoBlockProps) => {
-  const data: any = useLoaderData();
+  const data = JSON.parse(localStorage.getItem("user") as string);
 
   return (
     <div className={`info-block ${props.last ? "no-border" : ""}`}>
