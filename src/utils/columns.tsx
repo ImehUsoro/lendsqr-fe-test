@@ -18,6 +18,7 @@ export const columns = [
   {
     Header: "Date Joined",
     accessor: "createdAt",
+    disableFilters: true,
     Cell: ({ value }: any) => {
       const formattedDate = new Date(value).toLocaleString("en-US", {
         month: "long",
@@ -37,5 +38,6 @@ export const columns = [
   {
     Header: "",
     accessor: "icon",
+    disableFilters: true,
   },
 ];

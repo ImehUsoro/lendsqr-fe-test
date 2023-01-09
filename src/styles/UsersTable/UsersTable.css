@@ -28,8 +28,8 @@
   gap: 0.625rem;
 }
 .table-container .row {
-  padding-bottom: 1rem;
-  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
 }
 .table-container .link-to-user-details {
   text-decoration: none;
