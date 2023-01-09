@@ -1,75 +1,135 @@
 @import "../../Variables/Variables.scss";
 
 .table-container {
-  padding: 1.875rem 1.875rem 2rem 1.875rem;
+  width: 100%;
+  overflow: scroll;
   box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
   -webkit-box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
   -moz-box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
-  border-spacing: 0;
   border-radius: 0.25rem;
-  // border: 1px solid red;
-  // max-width: 300px;
-  // overflow-auto: scroll;
+  // border-spacing: 0;
 
   table {
-    border-spacing: 0;
-  }
+    padding: 1.625rem 1.875rem 0.875rem 1.875rem;
 
-  th {
-    color: $secondary-text-color;
-    font-size: 0.75rem;
-    text-align: left;
-    padding-bottom: 1.2rem;
-  }
+    th {
+      color: $secondary-text-color;
+      font-size: 0.75rem;
+      text-align: left;
+      padding-bottom: 0.75rem;
+      user-select: none;
+      // border: 1px solid red;
+    }
+    th:nth-child(1) {
+      min-width: 250px;
+    }
 
-  td {
-    color: $secondary-text-color;
-    font-size: 0.875rem;
-    text-align: left;
-    border-spacing: 0px;
-    border-bottom: 1px solid #213f7d1a;
-  }
+    th:nth-child(2) {
+      min-width: 200px;
+    }
 
-  .table-head-group {
-    display: flex;
-    align-items: center;
-    gap: 0.625rem;
-  }
-  .row {
-    padding-bottom: 0.5rem;
-    padding-top: 0.5rem;
-  }
+    th:nth-child(3) {
+      min-width: 250px;
+    }
+    th:nth-child(4) {
+      min-width: 200px;
+    }
+    th:nth-child(5) {
+      min-width: 250px;
+    }
+    th:nth-child(6) {
+      min-width: 150px;
+    }
 
-  .link-to-user-details {
-    text-decoration: none;
-    color: $secondary-text-color;
+    td {
+      color: $secondary-text-color;
+      font-size: 0.875rem;
+      text-align: left;
+      border-spacing: 0px;
+      border-bottom: 1px solid #213f7d1a;
+      // border: 1px solid red;
+    }
+
+    .table-head-group {
+      display: flex;
+      align-items: center;
+      gap: 0.625rem;
+    }
+    .row {
+      padding-bottom: 0.9rem;
+      padding-top: 0.9rem;
+      // width: 700px;
+      // border: 1px solid red;
+      .status-action {
+        position: relative;
+        cursor: pointer;
+        .action-modal {
+          position: absolute;
+          top: 2.5rem;
+          width: 11.25rem;
+          box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+          border-radius: 0.25rem;
+        }
+      }
+    }
+    .no-border {
+      border: none;
+    }
+
+    .link-to-user-details {
+      text-decoration: none;
+      color: $secondary-text-color;
+    }
+    .Inactive {
+      width: fit-content;
+      border-radius: 6.25rem;
+      color: $secondary-text-color;
+      background-color: $inactive-bg-color;
+      padding: 0.4375rem 0.8125rem 0.375rem;
+    }
+    .Active {
+      width: fit-content;
+      border-radius: 6.25rem;
+      color: $active-text-color;
+      background-color: $active-bg-color;
+      padding: 0.4375rem 0.8125rem 0.375rem;
+    }
+    .Pending {
+      width: fit-content;
+      border-radius: 6.25rem;
+      color: $pending-text-color;
+      background-color: $pending-bg-color;
+      padding: 0.4375rem 0.8125rem 0.375rem;
+    }
+    .Blacklisted {
+      width: fit-content;
+      border-radius: 6.25rem;
+      color: $blacklisted-text-color;
+      background-color: $blacklisted-bg-color;
+      padding: 0.4375rem 0.8125rem 0.375rem;
+    }
   }
-  .Inactive {
-    width: fit-content;
-    border-radius: 6.25rem;
-    color: $secondary-text-color;
-    background-color: $inactive-bg-color;
-    padding: 0.4375rem 0.8125rem 0.375rem;
-  }
-  .Active {
-    width: fit-content;
-    border-radius: 6.25rem;
-    color: $active-text-color;
-    background-color: $active-bg-color;
-    padding: 0.4375rem 0.8125rem 0.375rem;
-  }
-  .Pending {
-    width: fit-content;
-    border-radius: 6.25rem;
-    color: $pending-text-color;
-    background-color: $pending-bg-color;
-    padding: 0.4375rem 0.8125rem 0.375rem;
-  }
-  .Blacklisted {
-    width: fit-content;
-    border-radius: 6.25rem;
-    color: $blacklisted-text-color;
-    background-color: $blacklisted-bg-color;
-    padding: 0.4375rem 0.8125rem 0.375rem;
+}
+
+.table-pagination {
+  display: flex;
+  justify-content: space-between;
+  .table-page-counter {
+    .showing {
+      display: flex;
+      align-items: center;
+      gap: 0.625rem;
+      color: $secondary-text-color;
+      .showing-select {
+        border: 1px solid #213f7d1a;
+        select {
+          color: $primary-text-color;
+          border: none;
+          outline: none;
+          padding-top: 0.3rem;
+          padding-bottom: 0.3rem;
+        }
+      }
+    }
   }
 }

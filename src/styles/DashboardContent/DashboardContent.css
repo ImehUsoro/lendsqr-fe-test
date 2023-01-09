@@ -11,6 +11,8 @@
   font-size: 1.5rem;
   font-weight: 500;
   color: #213f7d;
+  padding: 0;
+  margin: 0;
 }
 
 .loader-container {

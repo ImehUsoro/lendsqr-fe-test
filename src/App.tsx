@@ -10,6 +10,8 @@ import DashboardPage from "./components/pages/DashboardPage";
 import UserDetails from "./components/pages/UserDetailsPage";
 import Root from "./components/pages/Root";
 import { fetchSingleUser, fetchUsers } from "./services/api";
+import DashboardErrorPage from "./components/pages/DashboardErrorPage";
+import UserDetailErrorPage from "./components/pages/UserDetailErrorPage";
 
 function App() {
   const router = createBrowserRouter(
@@ -20,11 +22,13 @@ function App() {
           path="/dashboard"
           element={<DashboardPage />}
           loader={fetchUsers}
+          errorElement={<DashboardErrorPage />}
         />
         <Route
           path="/user-details/:id"
           element={<UserDetails />}
           loader={({ params }) => fetchSingleUser(params.id as string)}
+          errorElement={<UserDetailErrorPage />}
         />
       </Route>
     )
