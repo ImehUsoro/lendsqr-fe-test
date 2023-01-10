@@ -50,6 +50,9 @@
   align-items: center;
   gap: 0.625rem;
 }
+.table-container table .table-head-group .filter {
+  cursor: pointer;
+}
 .table-container table .row {
   padding-bottom: 0.9rem;
   padding-top: 0.9rem;

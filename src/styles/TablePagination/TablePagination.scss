@@ -2,12 +2,16 @@
 
 .numbers-group {
   display: flex;
-  gap: 1.25rem;
-  margin: 0 1.25rem;
+  // gap: 1.25rem;
+  margin: 0 0.625rem;
   font-size: 1rem;
   color: #979daf;
   user-select: none;
+  cursor: pointer;
   .highlight {
     color: #545f7d;
+  }
+  .page-number {
+    padding: 0.625rem;
   }
 }

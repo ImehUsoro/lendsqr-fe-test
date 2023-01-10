@@ -56,6 +56,9 @@
       display: flex;
       align-items: center;
       gap: 0.625rem;
+      .filter {
+        cursor: pointer;
+      }
     }
     .row {
       padding-bottom: 0.9rem;
@@ -95,7 +98,6 @@
         }
 
         .item {
-          // border: 1px solid red;
           font-weight: 500;
           padding: 0.625rem 0;
           margin: 0;

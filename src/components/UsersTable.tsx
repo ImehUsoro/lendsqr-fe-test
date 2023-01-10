@@ -25,6 +25,7 @@ import TablePagination from "./TablePagination";
 import { IoEyeOutline } from "react-icons/io5";
 import { BiUserX } from "react-icons/bi";
 import { GrUserExpert } from "react-icons/gr";
+import FilterModal from "./FilterModal";
 
 const UsersTable = () => {
   const [actionModal, setActionModal] = useState(false);
@@ -32,7 +33,10 @@ const UsersTable = () => {
   const [selectedRow, setSelectedRow] = useState(0);
   const ref = useRef() as MutableRefObject<HTMLDivElement>;
 
+  const filterRef = useRef() as MutableRefObject<HTMLDivElement>;
+
   const navigate = useNavigate();
+
   useEffect(() => {
     const checkIfClickedOutside = (e: any) => {
       if (actionModal && ref.current && !ref.current.contains(e.target)) {
@@ -121,9 +125,14 @@ const UsersTable = () => {
                       >
                         {column.render("Header")}
                       </div>
-                      {column.render("Header") !== "" && (
-                        <BiFilter size={"1rem"} />
-                      )}
+                      <div
+                        className="filter"
+                        onClick={() => setFilterModal(true)}
+                      >
+                        {column.render("Header") !== "" && (
+                          <BiFilter size={"1rem"} />
+                        )}
+                      </div>
                       {/* <div>
                       {column.canFilter ? column.render("Filter") : null}
                     </div> */}
@@ -140,7 +149,6 @@ const UsersTable = () => {
               return (
                 <tr {...row.getRowProps()}>
                   {row.cells.map((cell: any) => {
-                    console.log({ cell });
                     return (
                       <td
                         {...cell.getCellProps()}
@@ -219,6 +227,14 @@ const UsersTable = () => {
             })}
           </tbody>
         </table>
+
+        {filterModal && (
+          <FilterModal
+            filterRef={filterRef}
+            filterModal={filterModal}
+            setFilterModal={setFilterModal}
+          />
+        )}
       </div>
 
       <div className="table-pagination">
@@ -230,6 +246,7 @@ const UsersTable = () => {
                 {pageOptions.map((item, index) => (
                   <option
                     value={index + 1}
+                    key={item}
                     selected={pageIndex === index ? true : false}
                   >
                     {(index + 1) * pageSize}
@@ -254,6 +271,7 @@ const UsersTable = () => {
             <TablePagination
               currentValue={pageIndex + 1}
               total={pageOptions.length}
+              gotoPage={gotoPage}
             />
 
             <button

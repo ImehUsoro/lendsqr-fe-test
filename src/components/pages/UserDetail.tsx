@@ -1,6 +1,6 @@
 import "../../styles/UserDetail/UserDetail.css";
 import back from "../../assets/icons/back_button.png";
-import { Link, useNavigation } from "react-router-dom";
+import { Link, useLoaderData, useNavigation } from "react-router-dom";
 import { BounceLoader } from "react-spinners";
 import UserActionButton from "../UserActionButton";
 import { MdStarOutline, MdStar } from "react-icons/md";
@@ -13,7 +13,8 @@ const UserDetail = () => {
   const [activeNav, setActiveNav] = useState("General Details");
   const navigation = useNavigation();
   const { state } = navigation;
-  const data = JSON.parse(localStorage.getItem("user") as string);
+  // const data = JSON.parse(localStorage.getItem("user") as string);
+  const data: any = useLoaderData();
 
   if (state === "loading") {
     return (
@@ -26,7 +27,12 @@ const UserDetail = () => {
       <div className="user-detail">
         <div className="go-back">
           <Link to="/dashboard">
-            <img src={back} alt="back icon" className="back-icon" />
+            <img
+              src={back}
+              alt="back icon"
+              className="back-icon"
+              onClick={() => localStorage.removeItem("user")}
+            />
           </Link>
           <p className="back-text">Back to Users</p>
         </div>
@@ -41,14 +47,14 @@ const UserDetail = () => {
         <div className="primary-information">
           <div className="user-info-display">
             <img
-              src={data.profile.avatar ? data.profile.avatar : ""}
+              src={data?.profile.avatar ? data?.profile.avatar : ""}
               alt=""
               className="user-image"
             />
 
             <div className="name-and-bvn">
-              <p className="name">{`${data.profile.firstName} ${data.profile.lastName}`}</p>
-              <p className="bvn">{data.profile.bvn}</p>
+              <p className="name">{`${data?.profile.firstName} ${data?.profile.lastName}`}</p>
+              <p className="bvn">{data?.profile.bvn}</p>
             </div>
 
             <div className="bar"></div>
@@ -65,9 +71,9 @@ const UserDetail = () => {
             <div className="bar"></div>
 
             <div className="bank-and-amount">
-              <p className="amount">₦{data.accountBalance.toLocaleString()}</p>
+              <p className="amount">₦{data?.accountBalance.toLocaleString()}</p>
               <p className="bank">
-                {data.accountNumber}/{randomBank}
+                {data?.accountNumber}/{randomBank}
               </p>
             </div>
           </div>
