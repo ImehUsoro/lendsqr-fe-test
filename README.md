@@ -4,7 +4,7 @@ This project was bootstrapped with React and Typescript.
 
 ### Available Scripts
 
-In the project directory, you can run to start the application:
+In the project directory, you can run the command below to start the application:
 
 ##### `npm start`
 
@@ -13,10 +13,10 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 #### Libraries Used
 
-* React Router Dom for page routing and data fetching.
+* React Router Dom for page routing and data fetching (v6.6.1).
 * Scss for styling.
-* React Table for Dashboard Table
-* React spinners for loader screens
+* React Table for Dashboard Table.
+* React spinners for loader screens.
 
 #### Features
 
