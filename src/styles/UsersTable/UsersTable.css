@@ -117,6 +117,10 @@
   align-items: center;
   gap: 0.625rem;
   color: #545f7d;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .table-pagination .table-page-counter .showing .showing-select {
   border: 1px solid rgba(33, 63, 125, 0.1019607843);
@@ -127,4 +131,31 @@
   outline: none;
   padding-top: 0.3rem;
   padding-bottom: 0.3rem;
+}
+.table-pagination .table-navigators .secondary-nav {
+  display: flex;
+  align-items: center;
+}
+.table-pagination .table-navigators .secondary-nav button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+.table-pagination .table-navigators .secondary-nav .action-icon {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  color: #213f7d;
+  padding: 0.40625rem 0.483rem;
+  background-color: rgba(33, 63, 125, 0.1019607843);
+  border-radius: 0.25rem;
+}
+.table-pagination .table-navigators .secondary-nav .action-icon:disabled {
+  color: #6f83aa;
 }/*# sourceMappingURL=UsersTable.css.map */

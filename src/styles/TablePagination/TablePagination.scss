@@ -1,0 +1,13 @@
+@import "../../Variables/Variables.scss";
+
+.numbers-group {
+  display: flex;
+  gap: 1.25rem;
+  margin: 0 1.25rem;
+  font-size: 1rem;
+  color: #979daf;
+  user-select: none;
+  .highlight {
+    color: #545f7d;
+  }
+}

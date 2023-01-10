@@ -1,0 +1,14 @@
+.numbers-group {
+  display: flex;
+  gap: 1.25rem;
+  margin: 0 1.25rem;
+  font-size: 1rem;
+  color: #979daf;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.numbers-group .highlight {
+  color: #545f7d;
+}/*# sourceMappingURL=Tablepagination.css.map */

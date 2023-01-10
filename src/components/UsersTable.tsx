@@ -9,10 +9,15 @@ import {
 } from "react-table";
 import { columns } from "../utils/columns";
 import { useMemo, useState } from "react";
-import { MdOutlineMoreVert } from "react-icons/md";
+import {
+  MdOutlineMoreVert,
+  MdOutlineArrowBackIosNew,
+  MdArrowForwardIos,
+} from "react-icons/md";
 import { BiFilter } from "react-icons/bi";
 import GlobalFilter from "./GlobalFilter";
 import ColumnFilter from "./ColumnFilter";
+import TablePagination from "./TablePagination";
 
 const UsersTable = () => {
   const statuses = ["Active", "Inactive", "Pending", "Blacklisted"];
@@ -69,8 +74,6 @@ const UsersTable = () => {
   );
 
   const { globalFilter, pageIndex, pageSize } = state;
-
-  console.log({ pageOptions });
 
   return (
     <>
@@ -160,6 +163,8 @@ const UsersTable = () => {
             Showing{" "}
             <div className="showing-select">
               <select onChange={(e) => gotoPage(+e.target.value - 1)}>
+                {/* <option value={1}></option> */}
+                {/* <option value={1}>{pageSize * (pageIndex + 1)}</option> */}
                 {pageOptions.map((item, index) => (
                   <option value={index + 1}>{(index + 1) * pageSize}</option>
                 ))}
@@ -169,28 +174,29 @@ const UsersTable = () => {
           </div>
         </div>
 
-        <div>
-          <button onClick={() => gotoPage(0)} disabled={!canPreviousPage}>
-            {"<<"}
-          </button>
-          <button onClick={() => previousPage()} disabled={!canPreviousPage}>
-            Previous
-          </button>
-          <span>
-            Page{" "}
-            <strong>
-              {pageIndex + 1} of {pageOptions.length}
-            </strong>
-          </span>
-          <button onClick={() => nextPage()} disabled={!canNextPage}>
-            Next
-          </button>
-          <button
-            onClick={() => gotoPage(pageCount - 1)}
-            disabled={!canNextPage}
-          >
-            {">>"}
-          </button>
+        <div className="table-navigators">
+          <div className="secondary-nav">
+            <button
+              className="action-icon"
+              onClick={() => previousPage()}
+              disabled={!canPreviousPage}
+            >
+              <MdOutlineArrowBackIosNew />
+            </button>
+
+            <TablePagination
+              currentValue={pageIndex + 1}
+              total={pageOptions.length}
+            />
+
+            <button
+              className="action-icon"
+              onClick={() => nextPage()}
+              disabled={!canNextPage}
+            >
+              <MdArrowForwardIos />
+            </button>
+          </div>
         </div>
       </div>
     </>

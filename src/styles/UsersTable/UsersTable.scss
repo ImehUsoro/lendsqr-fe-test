@@ -120,6 +120,7 @@
       align-items: center;
       gap: 0.625rem;
       color: $secondary-text-color;
+      user-select: none;
       .showing-select {
         border: 1px solid #213f7d1a;
         select {
@@ -129,6 +130,32 @@
           padding-top: 0.3rem;
           padding-bottom: 0.3rem;
         }
+      }
+    }
+  }
+  .table-navigators {
+    .secondary-nav {
+      display: flex;
+      align-items: center;
+      button {
+        background: none;
+        color: inherit;
+        border: none;
+        padding: 0;
+        font: inherit;
+        cursor: pointer;
+        outline: inherit;
+      }
+      .action-icon {
+        user-select: none;
+        cursor: pointer;
+        color: $primary-text-color;
+        padding: 0.40625rem 0.483rem;
+        background-color: #213f7d1a;
+        border-radius: 0.25rem;
+      }
+      .action-icon:disabled {
+        color: #6f83aa;
       }
     }
   }
