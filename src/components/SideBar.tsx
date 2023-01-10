@@ -22,15 +22,16 @@ import serviceAccount from "../assets/icons/service_account.png";
 import feesAndPricing from "../assets/icons/fees_and_pricing.png";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import SideBarItem from "./SideBarItem";
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useRecoilState } from "recoil";
+import { dashboardMenuState } from "../atoms/dashboardMenuAtom";
 
 interface SideBarProps {
   userDetailsPage?: boolean;
 }
 const SideBar = (props: SideBarProps) => {
   const navigate = useNavigate();
-  const [active, setActive] = useState("Users");
+  const [active, setActive] = useRecoilState(dashboardMenuState);
 
   return (
     <div className="side-bar-container">
@@ -40,7 +41,7 @@ const SideBar = (props: SideBarProps) => {
         <MdKeyboardArrowDown color="#213F7D" className="dropdown" />
       </div>
 
-      <SideBarItem title="Dashboard" icon={dashboard} />
+      <SideBarItem title="Dashboard" icon={dashboard} setActive={setActive} />
 
       <p className="title">CUSTOMERS</p>
 

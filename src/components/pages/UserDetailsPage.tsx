@@ -9,7 +9,6 @@ const UserDetails = () => {
   const data = useLoaderData();
   const { id } = useParams();
 
-  // console.log({ data });
   useEffect(() => {
     localStorage.setItem("user", JSON.stringify(data));
   }, [data, id]);
