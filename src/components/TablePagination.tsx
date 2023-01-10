@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import "../styles/TablePagination/TablePagination.css";
 
 interface TablePaginationProps {
@@ -8,21 +7,6 @@ interface TablePaginationProps {
 
 const TablePagination = (props: TablePaginationProps) => {
   const { currentValue, total } = props;
-  //   const [paginationState, setPaginationState] = useState(0);
-
-  //   console.log({ currentValue });
-  //   console.log({ minus: total - 2 });
-
-  //   useEffect(() => {
-  // if (currentValue > 3 && currentValue < total - 2) {
-  //   setPaginationState(1);
-  // } else if (currentValue > total - 2) {
-  //   setPaginationState(2);
-  // } else {
-  //   setPaginationState(0);
-  // }
-  // setPaginationState(currentValue);
-  //   }, [currentValue, total]);
 
   return (
     <>
@@ -54,6 +38,7 @@ const TablePagination = (props: TablePaginationProps) => {
           <div>{total}</div>
         </div>
       ) : currentValue > 3 &&
+        // currentValue !== total - 3 &&
         currentValue !== total - 2 &&
         currentValue !== total - 1 &&
         currentValue !== total ? (
@@ -61,7 +46,7 @@ const TablePagination = (props: TablePaginationProps) => {
           <div>1</div>
           <div>...</div>
           <div className="highlight">{currentValue}</div>
-          <div className="">{currentValue + 1}</div>
+          {/* Starts at 4, stops at 7 */}
           <div>...</div>
           <div>{total - 1}</div>
           <div>{total}</div>

@@ -74,6 +74,7 @@ const UsersTable = () => {
   );
 
   const { globalFilter, pageIndex, pageSize } = state;
+  const [selectedValue, setSelectedValue] = useState(0);
 
   return (
     <>
@@ -163,10 +164,13 @@ const UsersTable = () => {
             Showing{" "}
             <div className="showing-select">
               <select onChange={(e) => gotoPage(+e.target.value - 1)}>
-                {/* <option value={1}></option> */}
-                {/* <option value={1}>{pageSize * (pageIndex + 1)}</option> */}
                 {pageOptions.map((item, index) => (
-                  <option value={index + 1}>{(index + 1) * pageSize}</option>
+                  <option
+                    value={index + 1}
+                    selected={pageIndex === index ? true : false}
+                  >
+                    {(index + 1) * pageSize}
+                  </option>
                 ))}
               </select>{" "}
             </div>

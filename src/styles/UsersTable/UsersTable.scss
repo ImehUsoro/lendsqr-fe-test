@@ -7,7 +7,6 @@
   -webkit-box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
   -moz-box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
   border-radius: 0.25rem;
-  // border-spacing: 0;
 
   table {
     padding: 1.625rem 1.875rem 0.875rem 1.875rem;
@@ -18,7 +17,6 @@
       text-align: left;
       padding-bottom: 0.75rem;
       user-select: none;
-      // border: 1px solid red;
     }
     th:nth-child(1) {
       min-width: 250px;
@@ -47,7 +45,6 @@
       text-align: left;
       border-spacing: 0px;
       border-bottom: 1px solid #213f7d1a;
-      // border: 1px solid red;
     }
 
     .table-head-group {
@@ -58,8 +55,6 @@
     .row {
       padding-bottom: 0.9rem;
       padding-top: 0.9rem;
-      // width: 700px;
-      // border: 1px solid red;
       .status-action {
         position: relative;
         cursor: pointer;
@@ -156,6 +151,7 @@
       }
       .action-icon:disabled {
         color: #6f83aa;
+        cursor: not-allowed;
       }
     }
   }

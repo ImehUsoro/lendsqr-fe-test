@@ -158,4 +158,5 @@
 }
 .table-pagination .table-navigators .secondary-nav .action-icon:disabled {
   color: #6f83aa;
+  cursor: not-allowed;
 }/*# sourceMappingURL=UsersTable.css.map */
