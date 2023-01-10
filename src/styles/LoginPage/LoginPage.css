@@ -141,12 +141,26 @@
   border-radius: 0.5rem;
   padding: 1rem 0rem;
   transition: all 0.2s ease-in-out;
+  border: none;
 }
 .login-page-container form .link:hover {
   opacity: 0.8;
 }
 .login-page-container form .link:active {
   opacity: 0.6;
+}
+.login-page-container form .btn-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #afebeb;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  padding: 1rem 0rem;
+  transition: all 0.2s ease-in-out;
+  border: none;
+  cursor: not-allowed;
 }
 @media (max-width: 600px) {
   .login-page-container .left-side {

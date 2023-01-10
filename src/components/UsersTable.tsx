@@ -1,4 +1,5 @@
-import { Link, useLoaderData } from "react-router-dom";
+import React from "react";
+import { Link, useLoaderData, useNavigate } from "react-router-dom";
 import "../styles/UsersTable/UsersTable.css";
 import {
   useTable,
@@ -8,7 +9,7 @@ import {
   usePagination,
 } from "react-table";
 import { columns } from "../utils/columns";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState, MutableRefObject } from "react";
 import {
   MdOutlineMoreVert,
   MdOutlineArrowBackIosNew,
@@ -18,8 +19,34 @@ import { BiFilter } from "react-icons/bi";
 import GlobalFilter from "./GlobalFilter";
 import ColumnFilter from "./ColumnFilter";
 import TablePagination from "./TablePagination";
+// import eye from "../assets/icons/eye.png";
+// import blacklist from "../assets/icons/blacklist.png";
+// import activate from "../assets/icons/activate.png";
+import { IoEyeOutline } from "react-icons/io5";
+import { BiUserX } from "react-icons/bi";
+import { GrUserExpert } from "react-icons/gr";
 
 const UsersTable = () => {
+  const [actionModal, setActionModal] = useState(false);
+  const [filterModal, setFilterModal] = useState(false);
+  const [selectedRow, setSelectedRow] = useState(0);
+  const ref = useRef() as MutableRefObject<HTMLDivElement>;
+
+  const navigate = useNavigate();
+  useEffect(() => {
+    const checkIfClickedOutside = (e: any) => {
+      if (actionModal && ref.current && !ref.current.contains(e.target)) {
+        setActionModal(false);
+      }
+    };
+
+    document.addEventListener("mousedown", checkIfClickedOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", checkIfClickedOutside);
+    };
+  }, [actionModal]);
+
   const statuses = ["Active", "Inactive", "Pending", "Blacklisted"];
   const data: any = useLoaderData();
 
@@ -74,7 +101,6 @@ const UsersTable = () => {
   );
 
   const { globalFilter, pageIndex, pageSize } = state;
-  const [selectedValue, setSelectedValue] = useState(0);
 
   return (
     <>
@@ -114,6 +140,7 @@ const UsersTable = () => {
               return (
                 <tr {...row.getRowProps()}>
                   {row.cells.map((cell: any) => {
+                    console.log({ cell });
                     return (
                       <td
                         {...cell.getCellProps()}
@@ -141,9 +168,45 @@ const UsersTable = () => {
                             {cell.render("Cell")}
                           </div>
                         ) : cell.column.Header === "" ? (
-                          <div className="status-action">
+                          <div
+                            className="status-action"
+                            onClick={() => {
+                              setSelectedRow(cell.row.id);
+                              setActionModal(!actionModal);
+                            }}
+                          >
                             {cell.render("Cell")}
-                            {/* <div className="action-modal">testing</div> */}
+                            {actionModal && +selectedRow === +index && (
+                              <div className="action-modal" ref={ref}>
+                                <div
+                                  className="icon-and-text"
+                                  onClick={() => {
+                                    window.scrollTo({
+                                      top: 0,
+                                      left: 0,
+                                      behavior: "smooth",
+                                    });
+                                    navigate(
+                                      `/user-details/${cell.row.original.id}`
+                                    );
+                                  }}
+                                >
+                                  <IoEyeOutline
+                                    color="#545F7D"
+                                    size={"1.2rem"}
+                                  />
+                                  <p className="item">View Details</p>
+                                </div>
+                                <div className="icon-and-text">
+                                  <BiUserX color="#545F7D" size={"1.2rem"} />
+                                  <p className="item">Blacklist User</p>
+                                </div>
+                                <div className="icon-and-text">
+                                  <GrUserExpert color="#545F7D" />
+                                  <p className="item">Activate User</p>
+                                </div>
+                              </div>
+                            )}
                           </div>
                         ) : (
                           <>{cell.render("Cell")}</>
@@ -208,3 +271,5 @@ const UsersTable = () => {
 };
 
 export default UsersTable;
+
+// IoEyeOutline

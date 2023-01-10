@@ -1,6 +1,7 @@
 @import "../../Variables/Variables.scss";
 
 .table-container {
+  position: relative;
   width: 100%;
   overflow: scroll;
   box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
@@ -38,6 +39,10 @@
     th:nth-child(6) {
       min-width: 150px;
     }
+    th:nth-child(7) {
+      // max-width: 3px;
+      // border: 1px solid red;
+    }
 
     td {
       color: $secondary-text-color;
@@ -58,12 +63,42 @@
       .status-action {
         position: relative;
         cursor: pointer;
+        user-select: none;
         .action-modal {
           position: absolute;
-          top: 2.5rem;
+          top: -1rem;
+          left: -8.6rem;
           width: 11.25rem;
           box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
           border-radius: 0.25rem;
+          background-color: white;
+          z-index: 1;
+          padding-right: 75rem;
+        }
+
+        .icon-and-text {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          font-size: 0.875rem;
+          font-weight: 500;
+          cursor: pointer;
+          user-select: none;
+          // border: 1px solid blue;
+          transition: all 0.2s ease-in-out;
+          padding-left: 1.25rem;
+          // padding-right: 0.75rem;
+
+          &:hover {
+            background-color: #213f7d1a;
+          }
+        }
+
+        .item {
+          // border: 1px solid red;
+          font-weight: 500;
+          padding: 0.625rem 0;
+          margin: 0;
         }
       }
     }

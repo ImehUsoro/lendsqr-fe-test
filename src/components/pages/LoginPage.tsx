@@ -64,13 +64,19 @@ const LoginPage = () => {
             </button>
           </div>
           <p className="forgot-text">FORGOT PASSWORD?</p>
-          <Link to={"/dashboard"} className="link">
-            {state === "loading" ? (
-              <SyncLoader size={"0.8rem"} color="#ffffff" />
-            ) : (
-              "LOG IN"
-            )}
-          </Link>
+          {!email || !password ? (
+            <Link to={"/"} className="btn-link">
+              LOGIN
+            </Link>
+          ) : (
+            <Link to={"/dashboard"} className="link">
+              {state === "loading" ? (
+                <SyncLoader size={"0.8rem"} color="#ffffff" />
+              ) : (
+                "LOG IN"
+              )}
+            </Link>
+          )}
         </form>
       </div>
     </div>

@@ -3,13 +3,15 @@ import logo from "../assets/dashboard-logo.png";
 import image from "../assets/profile-picture.png";
 import { MdOutlineSearch, MdOutlineArrowDropDown } from "react-icons/md";
 import { IoIosNotificationsOutline } from "react-icons/io";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate();
   return (
     <header className="header">
       <div className="left-section">
         <div className="logo-image">
-          <img src={logo} alt="lendsqr logo" />
+          <img src={logo} alt="lendsqr logo" onClick={() => navigate("/")} />
         </div>
         <div className="search-container">
           <div className="search-input">

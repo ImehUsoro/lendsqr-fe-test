@@ -118,12 +118,25 @@
       border-radius: 0.5rem;
       padding: 1rem 0rem;
       transition: all 0.2s ease-in-out;
+      border: none;
       &:hover {
         opacity: 0.8;
       }
       &:active {
         opacity: 0.6;
       }
+    }
+
+    .btn-link {
+      @include centerItems;
+      background-color: #afebeb;
+      color: $primary-bg-color;
+      text-decoration: none;
+      border-radius: 0.5rem;
+      padding: 1rem 0rem;
+      transition: all 0.2s ease-in-out;
+      border: none;
+      cursor: not-allowed;
     }
   }
   @media (max-width: 600px) {

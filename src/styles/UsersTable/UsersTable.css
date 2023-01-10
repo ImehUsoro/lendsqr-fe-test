@@ -1,4 +1,5 @@
 .table-container {
+  position: relative;
   width: 100%;
   overflow: scroll;
   box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
@@ -56,13 +57,43 @@
 .table-container table .row .status-action {
   position: relative;
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .table-container table .row .status-action .action-modal {
   position: absolute;
-  top: 2.5rem;
+  top: -1rem;
+  left: -8.6rem;
   width: 11.25rem;
   box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
   border-radius: 0.25rem;
+  background-color: white;
+  z-index: 1;
+  padding-right: 75rem;
+}
+.table-container table .row .status-action .icon-and-text {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  transition: all 0.2s ease-in-out;
+  padding-left: 1.25rem;
+}
+.table-container table .row .status-action .icon-and-text:hover {
+  background-color: rgba(33, 63, 125, 0.1019607843);
+}
+.table-container table .row .status-action .item {
+  font-weight: 500;
+  padding: 0.625rem 0;
+  margin: 0;
 }
 .table-container table .no-border {
   border: none;
