@@ -1,1 +1,1 @@
-{"version":3,"sources":["Tablepagination.scss","Tablepagination.css"],"names":[],"mappings":"AAEA;EACE,aAAA;EAEA,kBAAA;EACA,eAAA;EACA,cAAA;EACA,yBAAA;KAAA,sBAAA;MAAA,qBAAA;UAAA,iBAAA;EACA,eAAA;ACFF;ADGE;EACE,cAAA;ACDJ;ADGE;EACE,iBAAA;ACDJ","file":"Tablepagination.css"}
+{"version":3,"sources":["TablePagination.scss","TablePagination.css"],"names":[],"mappings":"AAEA;EACE,aAAA;EAEA,kBAAA;EACA,eAAA;EACA,cAAA;EACA,yBAAA;KAAA,sBAAA;MAAA,qBAAA;UAAA,iBAAA;EACA,eAAA;ACFF;ADGE;EACE,cAAA;ACDJ;ADGE;EACE,iBAAA;ACDJ","file":"TablePagination.css"}

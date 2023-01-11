@@ -1,14 +1,14 @@
 .login-page-container {
   display: flex;
-  width: 100%;
+  max-width: 100%;
   height: 100vh;
   font-family: "Avenir Next Cyr", sans-serif;
 }
 .login-page-container .left-side {
   background-color: #ffffff;
   width: 50%;
-  padding-top: 6.625rem;
-  padding-left: 4.1875rem;
+  padding-top: 7%;
+  padding-left: 4.5%;
 }
 .login-page-container .left-side .lendsqr-logo {
   margin-left: 1.875rem;
@@ -17,19 +17,22 @@
 }
 .login-page-container .left-side .lendsqr-image {
   cursor: pointer;
+  width: 100%;
 }
 .login-page-container .right-side {
   background-color: #ffffff;
   width: 50%;
-  padding-left: 6.25rem;
+  padding-left: 6.7%;
   box-shadow: -15px 0px 90px 0px rgba(0, 0, 0, 0.03);
   -webkit-box-shadow: -15px 0px 90px 0px rgba(0, 0, 0, 0.03);
   -moz-box-shadow: -15px 0px 90px 0px rgba(0, 0, 0, 0.03);
 }
+.login-page-container .right-side .right-side-image {
+  display: none;
+}
 .login-page-container .right-side .welcome {
   margin: 0;
-  margin-top: 13.75rem;
-  margin-bottom: 0.625rem;
+  margin-top: 44%;
   font-size: 2.5rem;
   font-weight: 700;
   color: #213f7d;
@@ -162,11 +165,41 @@
   border: none;
   cursor: not-allowed;
 }
-@media (max-width: 600px) {
+@media (max-width: 1150px) {
+  .login-page-container {
+    height: 100vh;
+    border: 1px solid red;
+    margin: auto;
+  }
   .login-page-container .left-side {
     display: none;
   }
   .login-page-container .right-side {
+    padding-left: 0;
+    width: 100%;
+    margin: auto;
+    box-shadow: none;
+  }
+  .login-page-container .right-side .right-side-image {
+    display: block;
+    border: 1px solid red;
+  }
+  .login-page-container .right-side .welcome {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #213f7d;
+    letter-spacing: -0.09rem;
+    border: 1px solid red;
+    display: inline-block;
+  }
+  .login-page-container .right-side .login-text {
+    font-family: "Avenir Next Cyr", sans-serif;
+    font-size: 1rem;
+    color: #545f7d;
+    margin: 0;
+  }
+  .login-page-container .right-side form {
     width: 100%;
   }
 }/*# sourceMappingURL=LoginPage.css.map */

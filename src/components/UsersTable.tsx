@@ -26,11 +26,16 @@ import { IoEyeOutline } from "react-icons/io5";
 import { BiUserX } from "react-icons/bi";
 import { GrUserExpert } from "react-icons/gr";
 import FilterModal from "./FilterModal";
+import { modalFilterState } from "../atoms/dashboardMenuAtom";
+import { useRecoilState } from "recoil";
 
 const UsersTable = () => {
   const [actionModal, setActionModal] = useState(false);
   const [filterModal, setFilterModal] = useState(false);
   const [selectedRow, setSelectedRow] = useState(0);
+  const [formData, setFormData] = useRecoilState(modalFilterState);
+  console.log(formData);
+
   const ref = useRef() as MutableRefObject<HTMLDivElement>;
 
   const filterRef = useRef() as MutableRefObject<HTMLDivElement>;
@@ -127,15 +132,24 @@ const UsersTable = () => {
                       </div>
                       <div
                         className="filter"
-                        onClick={() => setFilterModal(true)}
+                        onClick={() => {
+                          setFilterModal(true);
+                          setFormData({
+                            org: "",
+                            username: "",
+                            email: "",
+                            phoneNumber: "",
+                            status: "",
+                          });
+                        }}
                       >
                         {column.render("Header") !== "" && (
                           <BiFilter size={"1rem"} />
                         )}
                       </div>
-                      {/* <div>
-                      {column.canFilter ? column.render("Filter") : null}
-                    </div> */}
+                      <div className="hidden">
+                        {column.canFilter ? column.render("Filter") : null}
+                      </div>
                     </div>
                   </th>
                 ))}

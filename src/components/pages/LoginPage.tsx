@@ -30,6 +30,7 @@ const LoginPage = () => {
         <img src={image} alt="lendsqr logo" className="lendsqr-image" />
       </div>
       <div className="right-side">
+        <img className="right-side-image" src={logo} alt="lendsqr logo" />
         <h2 className="welcome">Welcome!</h2>
         <p className="login-text">Enter details to login.</p>
 

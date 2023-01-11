@@ -17,7 +17,9 @@ const SideBarItem = (props: SideBarItemProps) => {
     <div
       className={`container ${props.active === props.title ? "active" : ""}`}
       onClick={() => {
-        active !== "Users" ? setActive && setActive("Users") : console.log("");
+        if (active === "Users" && setActive) {
+          setActive("Users");
+        }
         if (pathname !== "/dashboard") navigate("/dashboard");
       }}
     >

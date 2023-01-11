@@ -8,7 +8,7 @@
   -webkit-box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
   -moz-box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
   border-radius: 0.25rem;
-
+  min-height: 43rem;
   table {
     padding: 1.625rem 1.875rem 0.875rem 1.875rem;
 
@@ -58,6 +58,9 @@
       gap: 0.625rem;
       .filter {
         cursor: pointer;
+      }
+      .hidden {
+        display: none;
       }
     }
     .row {
