@@ -108,4 +108,11 @@
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+}
+.user-detail .no-content {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #213f7d;
+  font-weight: 500;
+  margin-top: 4rem;
 }/*# sourceMappingURL=UserDetail.css.map */

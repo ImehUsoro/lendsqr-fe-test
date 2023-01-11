@@ -50,15 +50,42 @@ const SideBar = (props: SideBarProps) => {
           <SideBarItem title="Users" icon={users} active={active} />
         </div>
 
-        <div onClick={() => setActive("Guarantors")}>
+        <div
+          onClick={() => {
+            setActive("Guarantors");
+            window.scrollTo({
+              top: 0,
+              left: 0,
+              behavior: "smooth",
+            });
+          }}
+        >
           <SideBarItem title="Guarantors" icon={guarantors} active={active} />
         </div>
 
-        <div onClick={() => setActive("Loans")}>
+        <div
+          onClick={() => {
+            setActive("Loans");
+            window.scrollTo({
+              top: 0,
+              left: 0,
+              behavior: "smooth",
+            });
+          }}
+        >
           <SideBarItem title="Loans" icon={loans} active={active} />
         </div>
 
-        <div onClick={() => setActive("Decision Models")}>
+        <div
+          onClick={() => {
+            setActive("Decision Models");
+            window.scrollTo({
+              top: 0,
+              left: 0,
+              behavior: "smooth",
+            });
+          }}
+        >
           <SideBarItem
             title="Decision Models"
             icon={decisions}
@@ -66,19 +93,56 @@ const SideBar = (props: SideBarProps) => {
           />
         </div>
 
-        <div onClick={() => setActive("Savings")}>
+        <div
+          onClick={() => {
+            setActive("Savings");
+            window.scrollTo({
+              top: 0,
+              left: 0,
+              behavior: "smooth",
+            });
+          }}
+        >
           <SideBarItem title="Savings" icon={savings} active={active} />
         </div>
 
-        <div onClick={() => setActive("Loan Requests")}>
+        <div
+          onClick={() => {
+            setActive("Loan Requests");
+
+            window.scrollTo({
+              top: 0,
+              left: 0,
+              behavior: "smooth",
+            });
+          }}
+        >
           <SideBarItem title="Loan Requests" icon={requests} active={active} />
         </div>
 
-        <div onClick={() => setActive("Whitelist")}>
+        <div
+          onClick={() => {
+            setActive("Whitelist");
+            window.scrollTo({
+              top: 0,
+              left: 0,
+              behavior: "smooth",
+            });
+          }}
+        >
           <SideBarItem title="Whitelist" icon={whitelist} active={active} />
         </div>
 
-        <div onClick={() => setActive("Karma")}>
+        <div
+          onClick={() => {
+            setActive("Karma");
+            window.scrollTo({
+              top: 0,
+              left: 0,
+              behavior: "smooth",
+            });
+          }}
+        >
           <SideBarItem title="Karma" icon={karma} active={active} />
         </div>
       </div>
@@ -86,15 +150,42 @@ const SideBar = (props: SideBarProps) => {
       <p className="title">BUSINESSES</p>
 
       <div className="grouping">
-        <div onClick={() => setActive("Organization")}>
+        <div
+          onClick={() => {
+            setActive("Organization");
+            window.scrollTo({
+              top: 0,
+              left: 0,
+              behavior: "smooth",
+            });
+          }}
+        >
           <SideBarItem title="Organization" icon={briefcase} active={active} />
         </div>
 
-        <div onClick={() => setActive("Loan Products")}>
+        <div
+          onClick={() => {
+            setActive("Loan Products");
+            window.scrollTo({
+              top: 0,
+              left: 0,
+              behavior: "smooth",
+            });
+          }}
+        >
           <SideBarItem title="Loan Products" icon={requests} active={active} />
         </div>
 
-        <div onClick={() => setActive("Savings Products")}>
+        <div
+          onClick={() => {
+            setActive("Savings Products");
+            window.scrollTo({
+              top: 0,
+              left: 0,
+              behavior: "smooth",
+            });
+          }}
+        >
           <SideBarItem
             title="Savings Products"
             icon={savingsProduct}
@@ -102,7 +193,16 @@ const SideBar = (props: SideBarProps) => {
           />
         </div>
 
-        <div onClick={() => setActive("Fees and Charges")}>
+        <div
+          onClick={() => {
+            setActive("Fees and Charges");
+            window.scrollTo({
+              top: 0,
+              left: 0,
+              behavior: "smooth",
+            });
+          }}
+        >
           <SideBarItem
             title="Fees and Charges"
             icon={feesAndCharges}
@@ -110,7 +210,16 @@ const SideBar = (props: SideBarProps) => {
           />
         </div>
 
-        <div onClick={() => setActive("Transactions")}>
+        <div
+          onClick={() => {
+            setActive("Transactions");
+            window.scrollTo({
+              top: 0,
+              left: 0,
+              behavior: "smooth",
+            });
+          }}
+        >
           <SideBarItem
             title="Transactions"
             icon={transactions}
@@ -118,11 +227,29 @@ const SideBar = (props: SideBarProps) => {
           />
         </div>
 
-        <div onClick={() => setActive("Services")}>
+        <div
+          onClick={() => {
+            setActive("Services");
+            window.scrollTo({
+              top: 0,
+              left: 0,
+              behavior: "smooth",
+            });
+          }}
+        >
           <SideBarItem title="Services" icon={services} active={active} />
         </div>
 
-        <div onClick={() => setActive("Service Account")}>
+        <div
+          onClick={() => {
+            setActive("Service Account");
+            window.scrollTo({
+              top: 0,
+              left: 0,
+              behavior: "smooth",
+            });
+          }}
+        >
           <SideBarItem
             title="Service Account"
             icon={serviceAccount}
@@ -130,11 +257,29 @@ const SideBar = (props: SideBarProps) => {
           />
         </div>
 
-        <div onClick={() => setActive("Settlements")}>
+        <div
+          onClick={() => {
+            setActive("Settlements");
+            window.scrollTo({
+              top: 0,
+              left: 0,
+              behavior: "smooth",
+            });
+          }}
+        >
           <SideBarItem title="Settlements" icon={settlements} active={active} />
         </div>
 
-        <div onClick={() => setActive("Reports")}>
+        <div
+          onClick={() => {
+            setActive("Reports");
+            window.scrollTo({
+              top: 0,
+              left: 0,
+              behavior: "smooth",
+            });
+          }}
+        >
           <SideBarItem title="Reports" icon={reports} active={active} />
         </div>
       </div>
@@ -142,11 +287,29 @@ const SideBar = (props: SideBarProps) => {
       <p className="title">SETTINGS</p>
 
       <div className="grouping">
-        <div onClick={() => setActive("Preferences")}>
+        <div
+          onClick={() => {
+            setActive("Preferences");
+            window.scrollTo({
+              top: 0,
+              left: 0,
+              behavior: "smooth",
+            });
+          }}
+        >
           <SideBarItem title="Preferences" icon={preferences} active={active} />
         </div>
 
-        <div onClick={() => setActive("Fees and Pricing")}>
+        <div
+          onClick={() => {
+            setActive("Fees and Pricing");
+            window.scrollTo({
+              top: 0,
+              left: 0,
+              behavior: "smooth",
+            });
+          }}
+        >
           <SideBarItem
             title="Fees and Pricing"
             icon={feesAndPricing}
@@ -154,7 +317,16 @@ const SideBar = (props: SideBarProps) => {
           />
         </div>
 
-        <div onClick={() => setActive("Audit Logs")}>
+        <div
+          onClick={() => {
+            setActive("Audit Logs");
+            window.scrollTo({
+              top: 0,
+              left: 0,
+              behavior: "smooth",
+            });
+          }}
+        >
           <SideBarItem title="Audit Logs" icon={audit} active={active} />
         </div>
       </div>

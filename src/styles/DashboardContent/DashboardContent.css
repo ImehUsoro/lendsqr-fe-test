@@ -14,6 +14,13 @@
   padding: 0;
   margin: 0;
 }
+.right-container .no-content {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #213f7d;
+  font-weight: 500;
+  margin-top: 4rem;
+}
 
 .loader-container {
   display: flex;

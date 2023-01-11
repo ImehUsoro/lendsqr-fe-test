@@ -8,9 +8,12 @@ import { useState } from "react";
 import UserDetailsNav from "../UserDetailsNav";
 import InfoBlock from "../InfoBlock";
 import { randomBank } from "../../utils/utils";
+import { userDetailNavState } from "../../atoms/dashboardMenuAtom";
+import { useRecoilState } from "recoil";
 
 const UserDetail = () => {
-  const [activeNav, setActiveNav] = useState("General Details");
+  // const [activeNav, setActiveNav] = useState("General Details");
+  const [activeNav, setActiveNav] = useRecoilState(userDetailNavState);
   const navigation = useNavigation();
   const { state } = navigation;
   // const data = JSON.parse(localStorage.getItem("user") as string);
@@ -103,13 +106,17 @@ const UserDetail = () => {
             </div>
           </div>
         </div>
-        <div className="secondary-information">
-          <InfoBlock gridColumns={5} header="Personal Information" />
-          <InfoBlock gridColumns={4} header="Education and Employment" />
-          <InfoBlock gridColumns={5} header="Socials" />
-          <InfoBlock gridColumns={5} header="Guarantor" />
-          <InfoBlock gridColumns={5} header="" last />
-        </div>
+        {activeNav === "General Details" ? (
+          <div className="secondary-information">
+            <InfoBlock gridColumns={5} header="Personal Information" />
+            <InfoBlock gridColumns={4} header="Education and Employment" />
+            <InfoBlock gridColumns={5} header="Socials" />
+            <InfoBlock gridColumns={5} header="Guarantor" />
+            <InfoBlock gridColumns={5} header="" last />
+          </div>
+        ) : (
+          <div className="no-content">No contents to display</div>
+        )}
       </div>
     );
   }

@@ -27,7 +27,7 @@ const DashboardContent = () => {
             <UsersTable />
           </>
         ) : (
-          <div>No Data Available to Display</div>
+          <div className="no-content">No Data Available to Display</div>
         )}
       </div>
     );
