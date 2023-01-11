@@ -12,20 +12,47 @@
   flex-direction: column;
   gap: 1.25rem;
 }
-.filter-container .single-filter .text {
+.filter-container p {
   padding: 0;
   margin: 0;
 }
+.filter-container .single-filter {
+  display: flex;
+  flex-direction: column;
+}
 .filter-container .single-filter .input {
-  width: 79%;
   margin-top: 0.375rem;
   padding: 0.75rem 1.25rem;
   justify-self: stretch;
   border: 1px solid #dcdfe5;
   border-radius: 0.5rem;
+  color: #545f7d;
+  align-items: stretch;
+  outline: none;
+}
+.filter-container .single-filter .input:placeholder {
+  color: #878fa4;
 }
 .filter-container .single-filter .org {
   margin-bottom: 0.375rem;
+}
+.filter-container .single-filter .select {
+  border-radius: 0.5rem;
+  border: 1px solid #dcdfe5;
+  margin-top: 0.375rem;
+  padding: 0.75rem 1.25rem;
+  outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  color: #545f7d;
+  width: 100%;
+}
+.filter-container .single-filter .select:checked {
+  color: #878fa4;
+}
+.filter-container .single-filter .select select:not(:-internal-list-box) {
+  overflow: hidden;
 }
 .filter-container .filter-actions {
   display: flex;
@@ -64,4 +91,21 @@
 }
 .filter-container .filter-actions .filter-btn:active {
   opacity: 0.8;
+}
+.filter-container .date .date-input-container {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #dcdfe5;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  margin-top: 0.375rem;
+}
+.filter-container .date .react-datepicker-wrapper,
+.filter-container .date .react-datepicker__input-container,
+.filter-container .date .react-datepicker__input-container input {
+  border: none;
+  outline: none;
+  margin: 0;
+  color: #545f7d;
+  padding: 0;
 }/*# sourceMappingURL=FilterModal.css.map */

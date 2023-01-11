@@ -1,24 +1,28 @@
 import "../styles/FilterModal/FilterModal.css";
 import Select from "react-select";
 import { useLoaderData } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { selectStyles } from "../utils/utils";
+import calender from "../assets/icons/calender.png";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import { useRecoilState } from "recoil";
+import { modalFilterState } from "../atoms/dashboardMenuAtom";
 
 interface FilterModalProps {
   filterModal: any;
   setFilterModal: any;
   filterRef: any;
-  //   options: any;
 }
 const FilterModal = (props: FilterModalProps) => {
-  const { filterModal, setFilterModal, filterRef } = props;
   const data: any = useLoaderData();
-
+  const [startDate, setStartDate] = useState();
+  const { filterModal, setFilterModal, filterRef } = props;
   const uniqueOrgs = [...new Set(data.map((item: any) => item.orgName))];
+  const statuses = ["Active", "Inactive", "Pending", "Blacklisted"];
+  const [formData, setFormData] = useRecoilState(modalFilterState);
 
-  const options = uniqueOrgs.map((item: any) => {
-    return { value: item.orgName, label: item.orgName };
-  });
-
+  // console.log(formData);
   useEffect(() => {
     const checkIfClickedOutside = (e: any) => {
       if (
@@ -36,36 +40,88 @@ const FilterModal = (props: FilterModalProps) => {
       document.removeEventListener("mousedown", checkIfClickedOutside);
     };
   }, [filterModal]);
+
+  const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
   return (
     <div className="filter-container" ref={filterRef}>
       <div className="single-filter">
         <p className="text org">Organization</p>
-        <Select options={options} />
+        <select className="select" name="org" onChange={handleSelectChange}>
+          <option value={""} className="option">
+            Select
+          </option>
+          {uniqueOrgs.map((org: any) => (
+            <option key={org} value={org}>
+              {org}
+            </option>
+          ))}
+        </select>
       </div>
 
       <div className="single-filter">
         <p className="text">Username</p>
-        <input type="text" placeholder="User" className="input" />
+        <input
+          name="username"
+          onChange={handleInputChange}
+          type="text"
+          placeholder="User"
+          className="input"
+        />
       </div>
 
       <div className="single-filter">
         <p className="text">Email</p>
-        <input type="text" placeholder="Email" className="input" />
+        <input
+          type="text"
+          placeholder="Email"
+          name="email"
+          onChange={handleInputChange}
+          className="input"
+        />
       </div>
 
-      <div className="single-filter">
+      <div className="date">
         <p className="text">Date</p>
-        <input type="text" placeholder="Date" className="input" />
+        <div className="date-input-container">
+          <DatePicker
+            selected={startDate}
+            onChange={(date: any) => setStartDate(date)}
+            wrapperClassName="datePicker"
+            placeholderText="Date"
+          />
+          <img src={calender} alt={`${calender} icon`} />
+        </div>
       </div>
 
       <div className="single-filter">
         <p className="text">Phone Number</p>
-        <input type="text" className="input" placeholder="Phone Number" />
+        <input
+          type="text"
+          className="input"
+          name="phoneNumber"
+          onChange={handleInputChange}
+          placeholder="Phone Number"
+        />
       </div>
 
       <div className="single-filter">
         <p className="text org">Status</p>
-        <Select options={options} />
+        <select className="select" name="status" onChange={handleSelectChange}>
+          <option value={""} className="option">
+            Select
+          </option>
+          {statuses.map((org: any) => (
+            <option key={org} value={org}>
+              {org}
+            </option>
+          ))}
+        </select>
       </div>
 
       <div className="filter-actions">

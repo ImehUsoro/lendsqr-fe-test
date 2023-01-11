@@ -37,3 +37,34 @@ const banks = [
 ];
 
 export const randomBank = banks[Math.floor(Math.random() * banks.length)];
+
+export const selectStyles = {
+  control: (styles: any) => ({
+    ...styles,
+    // padding: "0.4rem",
+    // fontSize: "14px",
+    // fontFamily: "Inter",
+    // margin: "8px 0 14px 0",
+    // borderRadius: "0",
+    // border: "1px solid red",
+    "& select": {
+      // font: "Inter",
+    },
+  }),
+  placeholder: (styles: any) => ({
+    ...styles,
+    // fontWeight: "400",
+  }),
+  dropdownIndicator: (provided: any, state: any) => {
+    return {
+      // ...provided,
+      // padding: "0px",
+      // paddingLeft: "0px",
+      // paddingTop: "0px",
+      // paddingRight: "30px",
+      // paddingDown: "0px",
+      // color: "black",
+      // cursor: "pointer",
+    };
+  },
+};
