@@ -5,6 +5,7 @@
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04);
   padding-top: 2.5rem;
   padding-bottom: 0.625rem;
+  min-width: 80px;
 
   .switch-organization {
     display: flex;
@@ -68,5 +69,40 @@
     color: $primary-text-color;
     padding-left: 1.875rem;
     font-size: 0.75rem;
+  }
+
+  @media (max-width: 1100px) {
+    .switch-organization {
+      padding-left: 0;
+      justify-content: center;
+      .text {
+        display: none;
+      }
+    }
+  }
+
+  @media (max-width: 800px) {
+    .title {
+      padding: 0;
+      text-align: center;
+      font-size: 0.625rem;
+    }
+  }
+
+  @media (max-width: 650px) {
+    .logout {
+      padding-left: 0;
+      justify-content: center;
+      &:hover {
+        padding-left: 1rem;
+      }
+      p {
+        display: none;
+      }
+    }
+    .version {
+      padding-left: 0;
+      text-align: center;
+    }
   }
 }

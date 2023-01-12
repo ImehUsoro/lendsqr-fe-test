@@ -3,6 +3,7 @@
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04);
   padding-top: 2.5rem;
   padding-bottom: 0.625rem;
+  min-width: 80px;
 }
 .side-bar-container .switch-organization {
   display: flex;
@@ -64,4 +65,36 @@
   color: #213f7d;
   padding-left: 1.875rem;
   font-size: 0.75rem;
+}
+@media (max-width: 1100px) {
+  .side-bar-container .switch-organization {
+    padding-left: 0;
+    justify-content: center;
+  }
+  .side-bar-container .switch-organization .text {
+    display: none;
+  }
+}
+@media (max-width: 800px) {
+  .side-bar-container .title {
+    padding: 0;
+    text-align: center;
+    font-size: 0.625rem;
+  }
+}
+@media (max-width: 650px) {
+  .side-bar-container .logout {
+    padding-left: 0;
+    justify-content: center;
+  }
+  .side-bar-container .logout:hover {
+    padding-left: 1rem;
+  }
+  .side-bar-container .logout p {
+    display: none;
+  }
+  .side-bar-container .version {
+    padding-left: 0;
+    text-align: center;
+  }
 }/*# sourceMappingURL=SideBar.css.map */

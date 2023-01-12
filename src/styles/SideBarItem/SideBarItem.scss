@@ -28,6 +28,41 @@
     font-size: 1rem;
     color: $primary-text-color;
   }
+
+  @media (max-width: 950px) {
+    padding-left: 1.25rem;
+    &:hover {
+      padding-left: 1.5rem;
+    }
+    .image {
+      display: none;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .title {
+      padding: 0.625rem 0;
+      margin: 0;
+      font-size: 0.625rem;
+      color: $primary-text-color;
+    }
+  }
+
+  @media (max-width: 650px) {
+    padding-left: 0;
+
+    &:hover {
+      padding-left: 0.75rem;
+    }
+    .title {
+      display: none;
+    }
+    .image {
+      display: block;
+      padding: 0.625rem 0;
+      margin: auto;
+    }
+  }
 }
 
 .active {

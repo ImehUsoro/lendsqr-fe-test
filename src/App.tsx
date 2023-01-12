@@ -28,7 +28,7 @@ function App() {
           path="/user-details/:id"
           element={<UserDetails />}
           loader={({ params }) => fetchSingleUser(params.id as string)}
-          // errorElement={<UserDetailErrorPage />}
+          errorElement={<UserDetailErrorPage />}
         />
       </Route>
     )

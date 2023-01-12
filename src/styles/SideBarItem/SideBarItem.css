@@ -27,6 +27,41 @@
   font-size: 1rem;
   color: #213f7d;
 }
+@media (max-width: 950px) {
+  .container {
+    padding-left: 1.25rem;
+  }
+  .container:hover {
+    padding-left: 1.5rem;
+  }
+  .container .image {
+    display: none;
+  }
+}
+@media (max-width: 800px) {
+  .container .title {
+    padding: 0.625rem 0;
+    margin: 0;
+    font-size: 0.625rem;
+    color: #213f7d;
+  }
+}
+@media (max-width: 650px) {
+  .container {
+    padding-left: 0;
+  }
+  .container:hover {
+    padding-left: 0.75rem;
+  }
+  .container .title {
+    display: none;
+  }
+  .container .image {
+    display: block;
+    padding: 0.625rem 0;
+    margin: auto;
+  }
+}
 
 .active {
   background-color: #f3fcfc;
