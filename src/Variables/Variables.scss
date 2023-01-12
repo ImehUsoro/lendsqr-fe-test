@@ -6,7 +6,6 @@ $secondary-text-color: #545f7d;
 $placeholder-color: #545f7d5d;
 $tertiary-text-color: #39cdcc;
 $inactive-bg-color: #f5f5f7;
-// inactive is the same as secondary text color
 $pending-bg-color: #fdf7e5;
 $pending-text-color: #e9b200;
 $active-text-color: #39cd62;
@@ -21,6 +20,12 @@ $sidebar-item-text-color: #7a8cb1;
 $primary-font: Work Sans, sans-serif;
 $secondary-font: "Avenir Next LT Pro", sans-serif;
 $tertiary-font: "Avenir Next Cyr", sans-serif;
+
+// CSS BREAKPOINTS
+
+$mobile: 320px;
+$tablet: 768px;
+$desktop: 1024px;
 
 @mixin centerItems {
   display: flex;

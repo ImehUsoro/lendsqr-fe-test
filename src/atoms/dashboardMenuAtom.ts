@@ -20,3 +20,13 @@ export const modalFilterState = atom({
     status: "",
   },
 });
+
+export const filterModalToggleState = atom({
+  key: "filterModalToggleState",
+  default: false,
+});
+
+export const globalFilterState = atom({
+  key: "globalFilterState",
+  default: "",
+});

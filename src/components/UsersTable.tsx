@@ -19,22 +19,21 @@ import { BiFilter } from "react-icons/bi";
 import GlobalFilter from "./GlobalFilter";
 import ColumnFilter from "./ColumnFilter";
 import TablePagination from "./TablePagination";
-// import eye from "../assets/icons/eye.png";
-// import blacklist from "../assets/icons/blacklist.png";
-// import activate from "../assets/icons/activate.png";
 import { IoEyeOutline } from "react-icons/io5";
 import { BiUserX } from "react-icons/bi";
 import { GrUserExpert } from "react-icons/gr";
 import FilterModal from "./FilterModal";
-import { modalFilterState } from "../atoms/dashboardMenuAtom";
+import {
+  filterModalToggleState,
+  modalFilterState,
+} from "../atoms/dashboardMenuAtom";
 import { useRecoilState } from "recoil";
 
 const UsersTable = () => {
   const [actionModal, setActionModal] = useState(false);
-  const [filterModal, setFilterModal] = useState(false);
   const [selectedRow, setSelectedRow] = useState(0);
   const [formData, setFormData] = useRecoilState(modalFilterState);
-  console.log(formData);
+  const [filterModal, setFilterModal] = useRecoilState(filterModalToggleState);
 
   const ref = useRef() as MutableRefObject<HTMLDivElement>;
 
@@ -114,7 +113,9 @@ const UsersTable = () => {
   return (
     <>
       <div className="table-container">
-        {/* <GlobalFilter filter={globalFilter} setFilter={setGlobalFilter} /> */}
+        <div className="hidden">
+          <GlobalFilter filter={globalFilter} setFilter={setGlobalFilter} />
+        </div>
 
         <table {...getTableProps()}>
           <thead>

@@ -32,11 +32,8 @@ const ColumnFilter = (props: ColumnFilterProps) => {
     <div>
       <input
         type="text"
-        value={filterValue || ""}
+        defaultValue={filterValue || ""}
         placeholder="search column"
-        // onChange={(e) => {
-        //   setFilter(Header === "Status" ? formData.status : null);
-        // }}
       />
     </div>
   );

@@ -1,15 +1,17 @@
 # Lendsqr Frontend Engineer Assessment
 
-This project was bootstrapped with React and Typescript.
+This project was bootstrapped with React and Typescript.min-height: 40rem;
 
-### Available Scripts
+## Available Scripts
 
-In the project directory, you can run the command below to start the application:
+In the project directory, you can run the command below to start the application:min-height: 40rem;
 
-##### `npm start`
+### `npm start`
 
-Runs the app in the development mode.\
+Runs the app in the development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+Open [live site](https://imeh-usoro-lendsqr-fe-test.vercel.app/) hosted on Vercel here.
 
 #### Libraries Used
 
@@ -24,3 +26,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 * Dashboard table with filtering, sorting and pagination.
 * Loader screens on request loading.
 * Error pages on request error.
+
+#### Navigating the table
+
+* Click on the table header to sort the table.
+* Use the search input in the header to search any column on the table.
+* Click on the filter icon to filter the table. A modal pops up and the table updates as you type/select an option. You can filter by organization, username, email, phone number and status.
+* Click outside the modal to close it.
+* To reset the table to it's initial state, click on any filter icon.
+* Click on the pagination buttons to navigate through the table.

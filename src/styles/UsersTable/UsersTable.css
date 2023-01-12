@@ -8,6 +8,9 @@
   border-radius: 0.25rem;
   min-height: 43rem;
 }
+.table-container .hidden {
+  display: none;
+}
 .table-container table {
   padding: 1.625rem 1.875rem 0.875rem 1.875rem;
 }

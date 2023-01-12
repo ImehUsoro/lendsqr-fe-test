@@ -4,9 +4,15 @@ import image from "../assets/profile-picture.png";
 import { MdOutlineSearch, MdOutlineArrowDropDown } from "react-icons/md";
 import { IoIosNotificationsOutline } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
+import { useRecoilState } from "recoil";
+import { globalFilterState } from "../atoms/dashboardMenuAtom";
 
 const Header = () => {
   const navigate = useNavigate();
+  const [globalFilterValue, setGlobalFilterValue] =
+    useRecoilState(globalFilterState);
+
+  // console.log(globalFilterValue);
   return (
     <header className="header">
       <div className="left-section">
@@ -15,7 +21,12 @@ const Header = () => {
         </div>
         <div className="search-container">
           <div className="search-input">
-            <input type="text" placeholder="Search for anything" />
+            <input
+              type="text"
+              value={globalFilterValue || ""}
+              placeholder="Search for anything"
+              onChange={(e) => setGlobalFilterValue(e.target.value)}
+            />
           </div>
           <div className="green-search-icon">
             <MdOutlineSearch color="white" size={"1rem"} />

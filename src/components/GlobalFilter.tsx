@@ -1,5 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useAsyncDebounce } from "react-table";
+import { useRecoilState, useRecoilValue } from "recoil";
+import { globalFilterState } from "../atoms/dashboardMenuAtom";
 
 interface GlobalFilterProps {
   filter: any;
@@ -8,23 +10,23 @@ interface GlobalFilterProps {
 
 export const GlobalFilter = (props: GlobalFilterProps) => {
   const { filter, setFilter } = props;
-  const [value, setValue] = useState(filter);
+  const globalFilterValue = useRecoilValue(globalFilterState);
 
-  const onChange = useAsyncDebounce((value) => {
-    setFilter(value || undefined);
-  }, 400);
+  // const onChange = useAsyncDebounce((value) => {
+  //   setFilter(value || undefined);
+  // }, 400);
+
+  useEffect(() => {
+    setFilter(globalFilterValue);
+  }, [globalFilterValue]);
 
   return (
     <div>
       <span>Search Table</span>
       <input
         type="text"
-        value={value || ""}
+        defaultValue={globalFilterValue || ""}
         placeholder="global filter"
-        onChange={(e) => {
-          setValue(e.target.value);
-          onChange(e.target.value);
-        }}
       />
     </div>
   );

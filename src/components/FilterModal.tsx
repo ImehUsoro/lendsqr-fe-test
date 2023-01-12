@@ -1,8 +1,6 @@
 import "../styles/FilterModal/FilterModal.css";
-import Select from "react-select";
 import { useLoaderData } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { selectStyles } from "../utils/utils";
 import calender from "../assets/icons/calender.png";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -22,7 +20,6 @@ const FilterModal = (props: FilterModalProps) => {
   const statuses = ["Active", "Inactive", "Pending", "Blacklisted"];
   const [formData, setFormData] = useRecoilState(modalFilterState);
 
-  // console.log(formData);
   useEffect(() => {
     const checkIfClickedOutside = (e: any) => {
       if (
