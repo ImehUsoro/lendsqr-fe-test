@@ -1,10 +1,10 @@
-# Lendsqr Frontend Engineer Assessment
+# Lendsqr Frontend Engineer Assessment Test
 
-This project was bootstrapped with React and Typescript.min-height: 40rem;
+This project was bootstrapped with React and Typescript.
 
 ## Available Scripts
 
-In the project directory, you can run the command below to start the application:min-height: 40rem;
+In the project directory, you can run the command below to start the application
 
 ### `npm start`
 
@@ -29,6 +29,8 @@ Open [live site](https://imeh-usoro-lendsqr-fe-test.vercel.app/) hosted on Verce
 
 #### Navigating the table
 
+* To navigate to a particular user's details click on the text in Organization, Username, Email or Phone Number column for that particular row.
+* You can also use the action button on the last column to navigate to the user's detail page. A modal pops up and you can click on the "View Details" button to navigate to the user's detail page.
 * Click on the table header to sort the table.
 * Use the search input in the header to search any column on the table.
 * Click on the filter icon to filter the table. A modal pops up and the table updates as you type/select an option. You can filter by organization, username, email, phone number and status.

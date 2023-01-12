@@ -165,10 +165,9 @@
   border: none;
   cursor: not-allowed;
 }
-@media (max-width: 1150px) {
+@media (max-width: 1024px) {
   .login-page-container {
     height: 100vh;
-    border: 1px solid red;
     margin: auto;
   }
   .login-page-container .left-side {
@@ -182,24 +181,31 @@
   }
   .login-page-container .right-side .right-side-image {
     display: block;
-    border: 1px solid red;
+    margin: auto auto 3rem auto;
   }
   .login-page-container .right-side .welcome {
-    margin: 0;
+    margin: 0 0 1.5rem 0;
+    text-align: center;
     font-size: 2rem;
     font-weight: 700;
     color: #213f7d;
     letter-spacing: -0.09rem;
-    border: 1px solid red;
-    display: inline-block;
   }
   .login-page-container .right-side .login-text {
     font-family: "Avenir Next Cyr", sans-serif;
     font-size: 1rem;
     color: #545f7d;
-    margin: 0;
+    margin: auto auto 2.5rem auto;
+    text-align: center;
   }
   .login-page-container .right-side form {
-    width: 100%;
+    max-width: 70%;
+    margin: auto;
+  }
+}
+@media (max-width: 420px) {
+  .login-page-container form {
+    max-width: 60%;
+    margin: auto;
   }
 }/*# sourceMappingURL=LoginPage.css.map */
