@@ -4,12 +4,12 @@ import UsersInformation from "./UsersInformation";
 import UsersTable from "./UsersTable";
 import BounceLoader from "react-spinners/BounceLoader";
 import { dashboardMenuState } from "../atoms/dashboardMenuAtom";
-import { useRecoilState } from "recoil";
+import { useRecoilValue } from "recoil";
 
 const DashboardContent = () => {
   const navigation = useNavigation();
   const { state } = navigation;
-  const [active, setActive] = useRecoilState(dashboardMenuState);
+  const active = useRecoilValue(dashboardMenuState);
 
   if (state === "loading") {
     return (

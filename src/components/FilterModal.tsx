@@ -36,6 +36,7 @@ const FilterModal = (props: FilterModalProps) => {
     return () => {
       document.removeEventListener("mousedown", checkIfClickedOutside);
     };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [filterModal]);
 
   const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {

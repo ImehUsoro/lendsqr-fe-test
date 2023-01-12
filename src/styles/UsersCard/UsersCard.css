@@ -1,9 +1,7 @@
 .users-card-container {
   width: 13.52rem;
   border-radius: 0.25rem;
-  padding-top: 1.25rem;
-  padding-left: 1.875rem;
-  padding-bottom: 1.875rem;
+  padding: 1.25rem 0 1.875rem 1.875rem;
   display: flex;
   flex-direction: column;
   gap: 1.142rem;
@@ -27,4 +25,18 @@
 }
 .users-card-container img {
   align-self: start;
+}
+@media (max-width: 400px) {
+  .users-card-container {
+    align-items: center;
+    padding: 1.25rem 0 1.875rem 0;
+  }
+  .users-card-container img {
+    align-self: center;
+  }
+}
+@media (max-width: 400px) {
+  .users-card-container {
+    width: 10rem;
+  }
 }/*# sourceMappingURL=UsersCard.css.map */

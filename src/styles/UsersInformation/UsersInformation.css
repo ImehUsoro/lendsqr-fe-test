@@ -1,4 +1,14 @@
 .user-information-container {
   display: flex;
   gap: 1.625rem;
+}
+@media (max-width: 1300px) {
+  .user-information-container {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 720px) {
+  .user-information-container {
+    justify-content: center;
+  }
 }/*# sourceMappingURL=UsersInformation.css.map */

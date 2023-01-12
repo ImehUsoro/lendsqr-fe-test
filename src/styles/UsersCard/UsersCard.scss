@@ -3,9 +3,7 @@
 .users-card-container {
   width: 13.52rem;
   border-radius: 0.25rem;
-  padding-top: 1.25rem;
-  padding-left: 1.875rem;
-  padding-bottom: 1.875rem;
+  padding: 1.25rem 0 1.875rem 1.875rem;
   display: flex;
   flex-direction: column;
   gap: 1.142rem;
@@ -30,5 +28,17 @@
 
   img {
     align-self: start;
+  }
+
+  @media (max-width: 400px) {
+    align-items: center;
+    padding: 1.25rem 0 1.875rem 0;
+    img {
+      align-self: center;
+    }
+  }
+
+  @media (max-width: 400px) {
+    width: 10rem;
   }
 }
