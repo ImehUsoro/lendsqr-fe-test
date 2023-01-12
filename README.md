@@ -31,7 +31,7 @@ Open [live site](https://imeh-usoro-lendsqr-fe-test.vercel.app/) hosted on Verce
 
 * To navigate to a particular user's details click on the text in Organization, Username, Email or Phone Number column for that particular row.
 * You can also use the action button on the last column to navigate to the user's detail page. A modal pops up and you can click on the "View Details" button to navigate to the user's detail page.
-* Click on the table header to sort the table.
+* Click on the table header on each column to sort the table. You can either sort in ascending or descending order.
 * Use the search input in the header to search any column on the table.
 * Click on the filter icon to filter the table. A modal pops up and the table updates as you type/select an option. You can filter by organization, username, email, phone number and status.
 * Click outside the modal to close it.

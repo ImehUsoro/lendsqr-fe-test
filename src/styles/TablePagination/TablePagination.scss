@@ -2,7 +2,6 @@
 
 .numbers-group {
   display: flex;
-  // gap: 1.25rem;
   margin: 0 0.625rem;
   font-size: 1rem;
   color: #979daf;
@@ -13,5 +12,9 @@
   }
   .page-number {
     padding: 0.625rem;
+  }
+
+  @media (max-width: 380px) {
+    font-size: 0.625rem;
   }
 }

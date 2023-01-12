@@ -21,9 +21,15 @@
   font-weight: 500;
   margin-top: 4rem;
 }
-@media (max-width: 720px) {
+@media (min-width: 2000px) {
   .right-container {
+    flex-direction: column;
     align-items: center;
+  }
+}
+@media (max-width: 720px) {
+  .right-container .heading {
+    text-align: center;
   }
 }
 

@@ -134,7 +134,16 @@ const UsersTable = () => {
                       <div
                         className="filter"
                         onClick={() => {
-                          setFilterModal(true);
+                          if (
+                            formData.org === "" &&
+                            formData.username === "" &&
+                            formData.email === "" &&
+                            formData.phoneNumber === "" &&
+                            formData.status === ""
+                          ) {
+                            setFilterModal(true);
+                          }
+
                           setFormData({
                             org: "",
                             username: "",

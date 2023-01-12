@@ -14,4 +14,9 @@
 }
 .numbers-group .page-number {
   padding: 0.625rem;
+}
+@media (max-width: 380px) {
+  .numbers-group {
+    font-size: 0.625rem;
+  }
 }/*# sourceMappingURL=TablePagination.css.map */

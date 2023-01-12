@@ -26,7 +26,7 @@
 .users-card-container img {
   align-self: start;
 }
-@media (max-width: 400px) {
+@media (max-width: 720px) {
   .users-card-container {
     align-items: center;
     padding: 1.25rem 0 1.875rem 0;
