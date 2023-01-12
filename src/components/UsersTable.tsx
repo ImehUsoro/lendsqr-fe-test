@@ -82,7 +82,7 @@ const UsersTable = () => {
     getTableProps,
     getTableBodyProps,
     headerGroups,
-    rows,
+    // rows,
     page,
     prepareRow,
     state,
@@ -93,8 +93,8 @@ const UsersTable = () => {
     previousPage,
     pageOptions,
     gotoPage,
-    pageCount,
-    setPageSize,
+    // pageCount,
+    // setPageSize,
   } = useTable(
     {
       columns: rowColumns as any,

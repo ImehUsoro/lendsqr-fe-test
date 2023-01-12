@@ -11,7 +11,7 @@
 
   .left-section {
     display: flex;
-    gap: 10.5125rem;
+    gap: 10.3rem;
 
     .logo-image {
       cursor: pointer;
@@ -29,7 +29,6 @@
         display: flex;
         align-items: center;
         padding-left: 1.5rem;
-
         input {
           width: 90%;
           border: none;
@@ -95,6 +94,86 @@
 
       .drop {
         cursor: pointer;
+      }
+    }
+  }
+
+  @media (max-width: 1150px) {
+    .left-section {
+      gap: 4rem;
+    }
+  }
+
+  @media (max-width: 1060px) {
+    .left-section {
+      gap: 2.5rem;
+    }
+  }
+
+  @media (max-width: 1020px) {
+    .left-section {
+      .search-container {
+        .search-input {
+          width: 15rem;
+        }
+      }
+    }
+  }
+  @media (max-width: 930px) {
+    .right-section {
+      .docs {
+        display: none;
+      }
+    }
+  }
+  @media (max-width: 840px) {
+    .right-section {
+      .icon {
+        display: none;
+      }
+    }
+  }
+
+  @media (max-width: 770px) {
+    .right-section {
+      .username {
+        display: none;
+      }
+    }
+  }
+
+  @media (max-width: 700px) {
+    padding: 1.5rem 1.875rem 1.5rem 1.875rem;
+  }
+
+  @media (max-width: 660px) {
+    .left-section {
+      .search-container {
+        .search-input {
+          width: 10rem;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 590px) {
+    .left-section {
+      .search-container {
+        display: none;
+      }
+    }
+  }
+
+  @media (max-width: 320px) {
+    .left-section {
+      .logo-image img {
+        width: 120px;
+      }
+    }
+
+    .right-section {
+      .profile-image {
+        width: 36px;
       }
     }
   }

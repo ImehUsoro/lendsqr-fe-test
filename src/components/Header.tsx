@@ -12,7 +12,6 @@ const Header = () => {
   const [globalFilterValue, setGlobalFilterValue] =
     useRecoilState(globalFilterState);
 
-  // console.log(globalFilterValue);
   return (
     <header className="header">
       <div className="left-section">
@@ -33,6 +32,7 @@ const Header = () => {
           </div>
         </div>
       </div>
+      
       <div className="right-section">
         <p className="docs">Docs</p>
         <div className="icon">

@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react";
-import { useAsyncDebounce } from "react-table";
-import { useRecoilState, useRecoilValue } from "recoil";
+import { useEffect } from "react";
+import { useRecoilValue } from "recoil";
 import { globalFilterState } from "../atoms/dashboardMenuAtom";
 
 interface GlobalFilterProps {
@@ -9,15 +8,12 @@ interface GlobalFilterProps {
 }
 
 export const GlobalFilter = (props: GlobalFilterProps) => {
-  const { filter, setFilter } = props;
+  const { setFilter } = props;
   const globalFilterValue = useRecoilValue(globalFilterState);
-
-  // const onChange = useAsyncDebounce((value) => {
-  //   setFilter(value || undefined);
-  // }, 400);
 
   useEffect(() => {
     setFilter(globalFilterValue);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [globalFilterValue]);
 
   return (

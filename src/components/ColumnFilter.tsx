@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useRecoilState, useRecoilValue } from "recoil";
+import { useRecoilValue } from "recoil";
 
 import { modalFilterState } from "../atoms/dashboardMenuAtom";
 interface ColumnFilterProps {
