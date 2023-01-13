@@ -9,6 +9,11 @@
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   user-select: none;
+
+  @media (max-width: 600px) {
+    width: 8rem;
+    padding: 0.5rem 0.5rem;
+  }
 }
 
 .Blacklist {

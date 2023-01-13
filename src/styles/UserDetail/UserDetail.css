@@ -2,6 +2,7 @@
   align-self: start;
   width: 72%;
   margin-top: 4.0625rem;
+  margin-right: 4.1%;
 }
 .user-detail .go-back {
   display: flex;
@@ -44,6 +45,8 @@
   display: flex;
   align-items: center;
   margin-bottom: 3.1875rem;
+  flex-wrap: wrap;
+  row-gap: 2rem;
 }
 .user-detail .primary-information .user-info-display .user-image {
   width: 6.25rem;
@@ -101,6 +104,9 @@
 .user-detail .primary-information .user-info-nav {
   display: flex;
   gap: 0.5rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 2rem;
 }
 .user-detail .secondary-information {
   box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
@@ -115,4 +121,55 @@
   color: #213f7d;
   font-weight: 500;
   margin-top: 4rem;
+}
+@media (max-width: 1030px) {
+  .user-detail .primary-information .user-info-nav {
+    justify-content: flex-start;
+    row-gap: 1.5rem;
+  }
+}
+@media (max-width: 1006px) {
+  .user-detail .primary-information .user-info-display {
+    justify-content: center;
+  }
+  .user-detail .primary-information .user-info-display .users-tier {
+    padding-right: 2rem;
+  }
+  .user-detail .primary-information .user-info-display .user-tier-bar-hidden {
+    display: none;
+  }
+}
+@media (max-width: 970px) {
+  .user-detail .user-action {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .user-detail .primary-information .user-info-display {
+    padding-right: 0.5rem;
+  }
+}
+@media (max-width: 843px) {
+  .user-detail .primary-information .user-info-display .name-bar-hidden {
+    display: none;
+  }
+  .user-detail .primary-information .user-info-display .name-and-bvn {
+    padding-right: 0.3rem;
+  }
+}
+@media (max-width: 600px) {
+  .user-detail .user-action .text {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .user-detail .user-action .blacklist-and-activate {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 400px) {
+  .user-detail .primary-information {
+    padding: 1.875rem 0 0 0.75rem;
+  }
 }/*# sourceMappingURL=UserDetail.css.map */

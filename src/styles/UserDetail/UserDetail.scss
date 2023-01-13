@@ -4,6 +4,8 @@
   align-self: start;
   width: 72%;
   margin-top: 4.0625rem;
+  margin-right: 4.1%;
+  // border: 1px solid red;
 
   .go-back {
     display: flex;
@@ -26,6 +28,7 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 2.5rem;
+    // border: 1px solid red;
 
     .text {
       font-weight: 500;
@@ -48,6 +51,8 @@
       display: flex;
       align-items: center;
       margin-bottom: 3.1875rem;
+      flex-wrap: wrap;
+      row-gap: 2rem;
 
       .user-image {
         width: 6.25rem;
@@ -112,6 +117,9 @@
     .user-info-nav {
       display: flex;
       gap: 0.5rem;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      row-gap: 2rem;
     }
   }
 
@@ -127,5 +135,77 @@
     color: $primary-text-color;
     font-weight: 500;
     margin-top: 4rem;
+  }
+
+  @media (max-width: 1030px) {
+    .primary-information {
+      .user-info-nav {
+        justify-content: flex-start;
+        row-gap: 1.5rem;
+      }
+    }
+  }
+
+  @media (max-width: 1006px) {
+    .primary-information {
+      .user-info-display {
+        justify-content: center;
+        .users-tier {
+          padding-right: 2rem;
+        }
+        .user-tier-bar-hidden {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 970px) {
+    .user-action {
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    .primary-information {
+      .user-info-display {
+        padding-right: 0.5rem;
+      }
+    }
+  }
+
+  @media (max-width: 843px) {
+    .primary-information {
+      .user-info-display {
+        .name-bar-hidden {
+          display: none;
+        }
+        .name-and-bvn {
+          padding-right: 0.3rem;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    .user-action {
+      .text {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .user-action {
+      .blacklist-and-activate {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+
+  @media (max-width: 400px) {
+    .primary-information {
+      padding: 1.875rem 0 0 0.75rem;
+    }
   }
 }

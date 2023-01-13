@@ -1,12 +1,11 @@
-.single-nav {
-  width: 9.8rem;
-}
 .single-nav .active-nav {
   border-bottom: 2px solid #39cdcc;
   color: #39cdcc;
 }
 .single-nav .nav-name {
-  padding: 0 0 0.625rem 0;
+  padding-bottom: 0.625rem;
+  padding-left: 1.55rem;
+  padding-right: 1.55rem;
   margin: 0;
   text-align: center;
 }

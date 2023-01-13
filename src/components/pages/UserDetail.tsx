@@ -4,7 +4,6 @@ import { Link, useLoaderData, useNavigation } from "react-router-dom";
 import { BounceLoader } from "react-spinners";
 import UserActionButton from "../UserActionButton";
 import { MdStarOutline, MdStar } from "react-icons/md";
-import { useState } from "react";
 import UserDetailsNav from "../UserDetailsNav";
 import InfoBlock from "../InfoBlock";
 import { randomBank } from "../../utils/utils";
@@ -12,11 +11,9 @@ import { userDetailNavState } from "../../atoms/dashboardMenuAtom";
 import { useRecoilState } from "recoil";
 
 const UserDetail = () => {
-  // const [activeNav, setActiveNav] = useState("General Details");
   const [activeNav, setActiveNav] = useRecoilState(userDetailNavState);
   const navigation = useNavigation();
   const { state } = navigation;
-  // const data = JSON.parse(localStorage.getItem("user") as string);
   const data: any = useLoaderData();
 
   if (state === "loading") {
@@ -60,7 +57,7 @@ const UserDetail = () => {
               <p className="bvn">{data?.profile.bvn}</p>
             </div>
 
-            <div className="bar"></div>
+            <div className="bar name-bar-hidden"></div>
 
             <div className="users-tier">
               <p className="name">User's Tier</p>
@@ -71,7 +68,7 @@ const UserDetail = () => {
               </div>
             </div>
 
-            <div className="bar"></div>
+            <div className="bar user-tier-bar-hidden"></div>
 
             <div className="bank-and-amount">
               <p className="amount">₦{data?.accountBalance.toLocaleString()}</p>

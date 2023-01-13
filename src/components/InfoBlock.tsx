@@ -13,16 +13,15 @@ interface InfoBlockProps {
   last?: boolean;
 }
 const InfoBlock = (props: InfoBlockProps) => {
-  // const data = JSON.parse(localStorage.getItem("user") as string);
+  const { gridColumns, header, last } = props;
   const data: any = useLoaderData();
-  // console.log({ data });
-  // console.log(data?.profile.firstName);
-  return (
-    <div className={`info-block ${props.last ? "no-border" : ""}`}>
-      <p className="secondary-title">{props.header}</p>
 
-      {props.header === "Personal Information" && (
-        <div className={`grid-container-${props.gridColumns}`}>
+  return (
+    <div className={`info-block ${last ? "no-border" : ""}`}>
+      <p className="secondary-title">{header}</p>
+
+      {header === "Personal Information" && (
+        <div className={`grid-container-${gridColumns}`}>
           <div className="single-info-block">
             <p className="info-block-title">Full Name</p>
             <p className="info">
@@ -73,8 +72,8 @@ const InfoBlock = (props: InfoBlockProps) => {
         </div>
       )}
 
-      {props.header === "Education and Employment" && (
-        <div className={`grid-container-${props.gridColumns}`}>
+      {header === "Education and Employment" && (
+        <div className={`grid-container-${gridColumns}`}>
           <div className="single-info-block">
             <p className="info-block-title">Level of Education</p>
             <p className="info">{data?.education.level}</p>
@@ -115,8 +114,8 @@ const InfoBlock = (props: InfoBlockProps) => {
         </div>
       )}
 
-      {props.header === "Socials" && (
-        <div className={`grid-container-${props.gridColumns}`}>
+      {header === "Socials" && (
+        <div className={`grid-container-${gridColumns}`}>
           <div className="single-info-block">
             <p className="info-block-title">Twitter</p>
             <p className="info">{data?.socials.twitter}</p>
@@ -134,8 +133,8 @@ const InfoBlock = (props: InfoBlockProps) => {
         </div>
       )}
 
-      {props.header === "Guarantor" && (
-        <div className={`grid-container-${props.gridColumns}`}>
+      {header === "Guarantor" && (
+        <div className={`grid-container-${gridColumns}`}>
           <div className="single-info-block">
             <p className="info-block-title">Full Name</p>
             <p className="info">
@@ -164,8 +163,8 @@ const InfoBlock = (props: InfoBlockProps) => {
         </div>
       )}
 
-      {props.header === "" && (
-        <div className={`grid-container-${props.gridColumns}`}>
+      {header === "" && (
+        <div className={`grid-container-${gridColumns}`}>
           <div className="single-info-block">
             <p className="info-block-title">Full Name</p>
             <p className="info">

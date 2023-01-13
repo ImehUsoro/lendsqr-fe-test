@@ -11,6 +11,12 @@
       -ms-user-select: none;
           user-select: none;
 }
+@media (max-width: 600px) {
+  .user-action-btn {
+    width: 8rem;
+    padding: 0.5rem 0.5rem;
+  }
+}
 
 .Blacklist {
   color: #e4033b;
