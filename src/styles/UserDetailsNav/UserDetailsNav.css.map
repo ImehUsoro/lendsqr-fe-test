@@ -1,1 +1,1 @@
-{"version":3,"sources":["UserDetailsNav.scss","../../Variables/Variables.scss","UserDetailsNav.css"],"names":[],"mappings":"AAOE;EACE,gCAAA;EACA,cCHkB;ACHtB;AFQE;EAEE,wBAAA;EACA,qBAAA;EACA,sBAAA;EACA,SAAA;EACA,kBAAA;AEPJ;AFQI;EACE,eAAA;AENN","file":"UserDetailsNav.css"}
+{"version":3,"sources":["UserDetailsNav.scss","../../Variables/Variables.scss","UserDetailsNav.css"],"names":[],"mappings":"AAOE;EACE,gCAAA;EACA,cCHkB;ACHtB;AFQE;EACE,wBAAA;EACA,qBAAA;EACA,sBAAA;EACA,SAAA;EACA,kBAAA;AENJ;AFOI;EACE,eAAA;AELN","file":"UserDetailsNav.css"}

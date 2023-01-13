@@ -195,6 +195,11 @@
   }
 
   @media (max-width: 480px) {
+    .primary-information {
+      .user-info-nav {
+        row-gap: 1rem;
+      }
+    }
     .user-action {
       .blacklist-and-activate {
         flex-direction: column;
@@ -206,6 +211,13 @@
   @media (max-width: 400px) {
     .primary-information {
       padding: 1.875rem 0 0 0.75rem;
+    }
+  }
+
+  @media (max-width: 350px) {
+    .secondary-information {
+      // padding: 0;
+      padding: 0 0.625rem 0rem;
     }
   }
 }

@@ -10,7 +10,6 @@
     color: $tertiary-text-color;
   }
   .nav-name {
-    // padding: 0 10% 0.625rem 10%;
     padding-bottom: 0.625rem;
     padding-left: 1.55rem;
     padding-right: 1.55rem;
@@ -18,6 +17,11 @@
     text-align: center;
     &:hover {
       cursor: pointer;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .nav-name {
     }
   }
 }
